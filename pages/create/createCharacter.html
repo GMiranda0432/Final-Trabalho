@@ -10,13 +10,12 @@
     <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
 <body>
-    <h1 class="text-center">Crie seu elemento</h1>
     <nav>
         <ul>
-            <li><a href="perfil/inventory.html">Inventário</a></li>
-            <li><a href="simulator/createSim.html">Simular batalha</a></li>
-            <li><a href="perfil/account.html">Seu perfil</a></li>
-            <li><a href="config.html">Configurações</a></li>
+            <li><a href="../perfil/inventory.html">Inventário</a></li>
+            <li><a href="../simulator/createSim.html">Simular batalha</a></li>
+            <li><a href="../perfil/account.html">Seu perfil</a></li>
+            <li><a href="../config.html">Configurações</a></li>
         </ul>
     </nav>
 
@@ -70,26 +69,27 @@
                 <textarea id="biografia" name="biografia" class="form-control" rows="4"></textarea>
             </div>
 
+<h1>Estastíticas do personagem</h1>
             <div class="row g-3 mb-3">
                 <div class="col-6 col-md-2">
                     <label class="form-label">Vida</label>
-                    <input type="number" id="vida" name="vida" class="form-control" min="0" value="100">
+                    <input type="number" id="vida" name="vida" class="form-control" min="0" max="100" value="100">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Dano</label>
-                    <input type="number" id="dano" name="dano" class="form-control" min="0" value="10">
+                    <input type="number" id="dano" name="dano" class="form-control" min="0" max="100" value="10">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Defesa</label>
-                    <input type="number" id="defesa" name="defesa" class="form-control" min="0" value="5">
+                    <input type="number" id="defesa" name="defesa" class="form-control" min="0" max="100" value="10">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Sorte</label>
-                    <input type="number" id="sorte" name="sorte" class="form-control" min="0" value="5">
+                    <input type="number" id="sorte" name="sorte" class="form-control" min="0" max="100" value="0">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Velocidade</label>
-                    <input type="number" id="velocidade" name="velocidade" class="form-control" min="0" value="5">
+                    <input type="number" id="velocidade" name="velocidade" class="form-control" min="0" max="100" value="0">
                 </div>
             </div>
 
