@@ -5,356 +5,258 @@
 > João Pedro,
 > Brian Lima
 
-<!-- 
+<!-- # 📋 Requisitos do Trabalho Final Interdisciplinar - TSI 2026/1
 
-# Trabalho Final Interdisciplinar
-
-**Curso Superior de TSI – 1º período – 2026/1**
-
-## Disciplinas
-
-* **Desenvolvimento Front-end I** – Prof. Matheus Jagi
-* **Ferramentas para Trabalho Colaborativo** – Prof. Bruno Clemente
-* **Lógica de Programação** – Prof. Archimedes Detoni
+> Este arquivo serve como guia rápido durante o desenvolvimento do projeto.
 
 ---
 
-## Objetivo
+# ✅ Requisitos Obrigatórios
 
-Este Trabalho Final Interdisciplinar tem o objetivo de abordar de forma integrada os conhecimentos adquiridos nas disciplinas de:
+## Desenvolvimento Front-end
 
-* Desenvolvimento Front-end I;
-* Ferramentas para Trabalho Colaborativo;
-* Lógica de Programação.
-
-O trabalho deverá ser desenvolvido em **grupos de 3 ou 4 integrantes** e envolve:
-
-* Planejamento e execução de atividades em equipe utilizando ferramentas de colaboração;
-* Desenvolvimento de uma aplicação web utilizando **HTML**, **CSS** e **JavaScript**.
-
-> A nota obtida neste trabalho será utilizada de formas diferentes em cada disciplina, conforme definido pelos respectivos professores.
+* [ ] Utilizar HTML, CSS e JavaScript.
+* [ ] Manter os arquivos separados (HTML, CSS e JS).
+* [ ] Desenvolver uma aplicação web funcional.
+* [ ] Criar um layout organizado e agradável.
+* [ ] Tornar o site responsivo para desktop e dispositivos móveis.
+* [ ] Utilizar localStorage para persistência dos dados.
+* [ ] Armazenar os dados em formato JSON.
+* [ ] Implementar pelo menos um componente gerado dinamicamente via JavaScript.
 
 ---
 
-# Avaliação
+## CRUD Obrigatório
 
-## 1ª Parte — Entrega da Aplicação
+A aplicação deve possuir funcionalidades para:
 
-O grupo deverá enviar todos os arquivos relacionados ao projeto:
-
-* Documentação;
-* Arquivos de mídia;
-* Códigos HTML;
-* Códigos CSS;
-* Códigos JavaScript.
-
-### Requisitos
-
-* Todos os arquivos devem ser enviados pelo AVA em cada disciplina;
-* Os mesmos arquivos devem ser enviados em todas as salas para registro da entrega;
-* Os professores deverão ser adicionados:
-
-  * No Trello da equipe;
-  * No GitHub (ou ferramenta equivalente de versionamento).
-
-### Prazo
-
-**30/06/2026**
-
-### Observação
-
-A nota desta etapa será a mesma para todos os integrantes do grupo.
+* [ ] Criar registros (Create).
+* [ ] Consultar registros (Read).
+* [ ] Alterar registros (Update).
+* [ ] Excluir registros (Delete).
 
 ---
 
-## 2ª Parte — Apresentação e Entrevista
+## Manipulação de Vetores
 
-O grupo deverá realizar uma apresentação com duração aproximada de **15 minutos**.
-
-### Conteúdo da apresentação
-
-Explicar:
-
-* O funcionamento da aplicação;
-* Organização do trabalho em equipe;
-* Uso das ferramentas de apoio ao trabalho;
-* Desenvolvimento dos códigos da aplicação.
-
-### Entrevista
-
-Após a apresentação:
-
-* O grupo responderá perguntas dos professores;
-* O grupo responderá perguntas dos colegas da turma.
-
-### Critérios avaliados
-
-* Qualidade das respostas fornecidas;
-* Participação individual;
-* Qualidade das perguntas feitas aos demais grupos.
-
-### Datas
-
-Entre **01/07/2026 e 06/07/2026**.
-
-### Observação
-
-A nota desta etapa será **individual**.
-
----
-
-# Critérios por Disciplina
-
-## Desenvolvimento Front-end I
-
-### Requisitos
-
-* Utilizar HTML e CSS como tecnologias base;
-* É permitido utilizar Bootstrap;
-* Os dados devem ser armazenados no **localStorage** em formato **JSON**;
-* Implementar todas as operações de CRUD:
-
-  * Create
-  * Read
-  * Update
-  * Delete
-* A aplicação deve ser responsiva;
-* Deve funcionar adequadamente em:
-
-  * Desktop;
-  * Dispositivos móveis;
-* Deve possuir pelo menos um componente gerado dinamicamente a partir dos dados armazenados.
-
----
-
-## Ferramentas para Trabalho Colaborativo
-
-### Requisitos
-
-* Utilizar Trello para gerenciamento da equipe;
-* Utilizar Git e GitHub para versionamento do código.
-
-### Foco da avaliação
-
-* Controle de tarefas:
-
-  * TODO
-  * Doing
-  * Done
-* Criação de branches individuais;
-* Realização de merges;
-* Manutenção da branch `main`.
-
----
-
-## Lógica de Programação
-
-### Foco da avaliação
-
-* Qualidade do código JavaScript;
-* Organização;
-* Boas práticas;
-* Legibilidade;
-* Correção;
-* Concisão;
-* Geração correta das informações.
-
-### OBS 1
-
-Utilizar obrigatoriamente estrutura de repetição:
+Os dados devem ser armazenados em:
 
 ```javascript
-for
+const vetor = [
+    {
+        chave1: valor1,
+        chave2: valor2
+    }
+];
 ```
 
-**Não utilizar métodos de arrays**, como:
+A aplicação deve permitir:
 
-* forEach()
-* find()
-* indexOf()
-* includes()
-* filter()
-* map()
-* findIndex()
+* [ ] Inclusão de elementos.
+* [ ] Exclusão de elementos.
+* [ ] Consulta de um elemento.
+* [ ] Alteração de um elemento.
+* [ ] Listagem de todos os elementos.
+* [ ] Filtro por um critério.
+* [ ] Filtro por combinação de dois critérios.
 
-### OBS 2
+Exemplos:
+
+* Produtos acima de R$100.
+* Usuários do gênero feminino com menos de 60 anos.
+
+````
+
+## Trabalho Colaborativo
+
+### Trello
+
+- [ ] Criar quadro da equipe.
+- [ ] Adicionar todos os integrantes.
+- [ ] Adicionar os professores.
+- [ ] Organizar tarefas em:
+  - TODO
+  - Doing
+  - Done
+
+### Git e GitHub
+
+- [ ] Utilizar Git para versionamento.
+- [ ] Utilizar GitHub para hospedagem do projeto.
+- [ ] Criar branches individuais.
+- [ ] Realizar merges corretamente.
+- [ ] Manter a branch main estável.
+
+---
+
+# ✅ Permitido
+
+## Tecnologias
+
+- [x] HTML
+- [x] CSS
+- [x] JavaScript
+- [x] Bootstrap
+- [x] JSON
+- [x] localStorage
+
+## Estruturas
+
+- [x] if
+- [x] else
+- [x] else if
+- [x] for
+- [x] while
+- [x] functions
+
+---
+
+# ❌ Não Permitido
+
+## Métodos de Array
+
+Não utilizar:
+
+- [ ] forEach()
+- [ ] find()
+- [ ] findIndex()
+- [ ] indexOf()
+- [ ] includes()
+- [ ] map()
+- [ ] filter()
+- [ ] reduce()
+- [ ] some()
+- [ ] every()
+
+### Observação
+
+Todo percurso de vetores deve ser feito utilizando:
+
+```javascript
+for (...)
+````
+
+---
+
+## Interrupção de Estruturas
 
 Não utilizar:
 
 ```javascript
 break
+```
+
+```javascript
 continue
 ```
 
-para interromper estruturas de repetição ou condicionais.
+em estruturas de repetição ou condicionais.
 
 ---
 
-# Orientações Gerais
+# ✅ Boas Práticas Obrigatórias
 
-## Organização do Código
+## Organização
 
-* Separar adequadamente HTML, CSS e JavaScript;
-* Utilizar comentários;
-* Utilizar cabeçalhos;
-* Respeitar a indentação;
-* Utilizar nomenclatura adequada para:
+* [ ] Código organizado.
+* [ ] Indentação correta.
+* [ ] Comentários explicativos.
+* [ ] Cabeçalhos nos arquivos.
+* [ ] Boa legibilidade.
 
-  * Variáveis;
-  * Funções;
-  * Elementos HTML;
-  * Classes CSS.
+## Nomenclatura
 
----
-
-## Tratamento das Entradas
-
-### O sistema deve:
-
-* Informar ao usuário o tipo de dado esperado;
-* Validar entradas;
-* Exibir mensagens de erro quando necessário.
-
-### Exemplos
-
-* Campo obrigatório vazio;
-* Valor inválido;
-* Formato incorreto.
+* [ ] Variáveis com nomes significativos.
+* [ ] Funções com nomes significativos.
+* [ ] Elementos HTML bem identificados.
+* [ ] Classes CSS bem identificadas.
 
 ---
 
-## Apresentação dos Resultados
+# ✅ Validação de Dados
 
-### O sistema deve:
+* [ ] Verificar campos vazios.
+* [ ] Verificar entradas inválidas.
+* [ ] Informar erros ao usuário.
+* [ ] Orientar corretamente sobre os dados esperados.
 
-* Exibir mensagens claras;
-* Informar adequadamente o significado dos resultados;
-* Formatar corretamente os dados.
+Exemplos:
 
-### Exemplo
-
-Valores monetários:
-
-```text
-R$ 10,50
+```javascript
+alert("Preencha todos os campos.");
 ```
 
-e não:
-
-```text
-10.5
+```javascript
+alert("Informe um valor numérico válido.");
 ```
 
 ---
 
-## Testes
+# ✅ Apresentação dos Resultados
+
+* [ ] Mostrar informações de forma clara.
+* [ ] Exibir mensagens compreensíveis.
+* [ ] Formatar corretamente valores numéricos.
+* [ ] Formatar corretamente valores monetários.
+
+Exemplo:
+
+```javascript
+valor.toFixed(2);
+```
+
+---
+
+# ✅ Testes
 
 Antes da entrega:
 
-* Utilizar ferramentas de debugging;
-* Testar todas as funcionalidades;
-* Corrigir erros encontrados;
-* Realizar melhorias necessárias.
+* [ ] Testar todas as funcionalidades.
+* [ ] Utilizar ferramentas de debugging.
+* [ ] Corrigir erros encontrados.
+* [ ] Revisar experiência do usuário.
 
 ---
 
-# Tema da Aplicação
+# 📅 Datas Importantes
 
-Cada grupo deverá escolher um tema e desenvolver uma aplicação baseada em:
+## Entrega dos Arquivos
 
-* Vetores;
-* Vetores de objetos literais.
-
-### Exemplo de estrutura
-
-```javascript
-{
-    chave1: valor1,
-    chave2: valor2,
-    chave3: valor3
-}
-```
+30/06/2026
 
 ---
 
-# Funcionalidades Obrigatórias
+## Apresentação
 
-A aplicação deverá permitir:
+Entre 01/07/2026 e 06/07/2026
 
-## Inclusão
+### O grupo deverá apresentar:
 
-Adicionar novos elementos ao vetor.
+* Organização da equipe.
+* Uso do Trello.
+* Uso do Git/GitHub.
+* Estrutura do projeto.
+* Funcionalidades da aplicação.
+* Principais trechos do código.
 
-## Exclusão
+### Tempo
 
-Remover elementos existentes.
-
-## Consulta
-
-Pesquisar os dados de um elemento específico.
-
-## Alteração
-
-Modificar dados de um elemento existente.
-
-## Listagem
-
-Exibir todos os elementos armazenados.
-
-## Filtro Simples
-
-Filtrar elementos utilizando um único critério.
-
-### Exemplo
-
-```text
-Produtos com preço acima de R$ 100,00
-```
-
-## Filtro Composto
-
-Filtrar elementos utilizando dois critérios simultaneamente.
-
-### Exemplo
-
-```text
-Usuários do gênero feminino e com idade inferior a 60 anos
-```
+15 minutos.
 
 ---
 
-# Resumo dos Requisitos Obrigatórios
+# 🎯 Objetivo Principal
 
-✅ HTML, CSS e JavaScript
+Criar uma aplicação web utilizando:
 
-✅ localStorage + JSON
+* HTML
+* CSS
+* JavaScript
+* Vetores
+* Objetos literais
+* localStorage
+* JSON
+* CRUD completo
+* Filtros e pesquisas
 
-✅ CRUD completo
-
-✅ Responsividade
-
-✅ Uso de vetores de objetos
-
-✅ Inclusão
-
-✅ Exclusão
-
-✅ Consulta
-
-✅ Alteração
-
-✅ Listagem
-
-✅ Filtro simples
-
-✅ Filtro composto
-
-✅ Trello
-
-✅ GitHub
-
-✅ Uso obrigatório de `for`
-
-❌ Não utilizar `forEach`, `filter`, `map`, `find`, etc.
-
-❌ Não utilizar `break` ou `continue`
+seguindo as boas práticas ensinadas durante o semestre.
