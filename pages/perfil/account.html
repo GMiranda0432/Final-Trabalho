@@ -10,18 +10,30 @@
     <link rel="icon" type="image/x-icon" href="../../favicon.png">
 </head>
 <body>
-    <h1 class="text-center">Sua Conta</h1>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Início</a></li>
-            <li><a href="inventory.html">Inventário</a></li>
-            <li><a href="../config.html">Configurações</a></li>
-            <li><a href="login.html">Fazer Login</a></li>
-            <li><a href="register.html">Fazer Cadastro</a></li>
-        </ul>
-    </nav>
+    <main class="container py-4">
+        <nav class="mb-3">
+            <ul class="list-unstyled d-flex gap-3 justify-content-center">
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="inventory.html">Inventário</a></li>
+                <li><a href="../config.html">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <h1 class="h4 text-center mb-4">Perfil</h1>
+
+        <div class="card mx-auto" style="max-width:680px;">
+            <div class="card-body text-center">
+                <p class="mb-3">Parece que você não está logado.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="login.html" class="btn btn-primary">Fazer Login</a>
+                    <a href="register.html" class="btn btn-outline-primary">Criar Conta</a>
+                </div>
+                <p class="text-muted small mt-3">Ao criar uma conta seu perfil aparecerá aqui com nome, foto, e biografia.</p>
+            </div>
+        </div>
+    </main>
+<!--implementar depois-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
 </body>
 
 </html>

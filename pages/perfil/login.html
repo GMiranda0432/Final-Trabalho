@@ -10,38 +10,32 @@
     <link rel="icon" type="image/x-icon" href="../../favicon.png">
 </head>
 <body>
-    <h1 class="text-center">Login</h1>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Início</a></li>
-            <li><a href="register.html">Fazer Cadastro</a></li>
-        </ul>
-    </nav>
+    <main class="container py-4">
+        <nav class="mb-3">
+            <ul class="list-unstyled d-flex gap-3 justify-content-center">
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="register.html">Fazer Cadastro</a></li>
+            </ul>
+        </nav>
 
-    <h1>Faça login para acessar sua conta</h1>
-    <form action="#" method="post">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <h1 class="h4 text-center mb-4">Login</h1>
 
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br><br>
+        <form class="mx-auto" style="max-width:420px;" action="#" method="post">
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Nome de usuário</label>
+                <input type="text" id="usuario" name="usuario" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" id="senha" name="senha" class="form-control" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </form>
 
-        <input type="submit" value="Login">
-
-    </form>
-    <script>
-        addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            if (email.value !== "" && senha.value !== "") {
-                alert('Enviado com sucesso!');
-            } else {
-                alert('Erro no envio, há um erro no meu código :,]');
-            }
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
+    </main>
 </body>
 
 </html>
