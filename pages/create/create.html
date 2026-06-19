@@ -10,26 +10,30 @@
     <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
 <body>
-    <h1 class="text-center">Crie seu elemento</h1>
-    <nav>
-        <ul>
-            <li><a href="perfil/inventory.html">Inventário</a></li>
-            <li><a href="simulator/createSim.html">Simular batalha</a></li>
-            <li><a href="perfil/account.html">Seu perfil</a></li>
-            <li><a href="config.html">Configurações</a></li>
-        </ul>
-    </nav>
+    <main class="container py-4">
+        <h1 class="text-center mb-4">Crie seu elemento</h1>
 
-    <h1>O que deseja criar?</h1>
-    <nav>
-        <ul>
-            <li><a href="createCharacter.html">Personagem</a></li>
-            <li><a href="createObject.html">Objeto</a></li>
-            <li><a href="createScenario.html">Cenário</a></li>
-        </ul>
-    </nav>
+        <nav class="mb-4">
+            <ul class="list-unstyled d-flex gap-3 justify-content-center">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../perfil/inventory.html">Inventário</a></li>
+                <li><a href="../simulator/createSim.html">Simular</a></li>
+                <li><a href="../perfil/account.html">Perfil</a></li>
+                <li><a href="../config.html">Configurações</a></li>
+            </ul>
+        </nav>
+
+        <section class="text-center">
+            <p class="mb-3">O que deseja criar?</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="createCharacter.html" class="btn btn-outline-primary btn-lg">Personagem</a>
+                <a href="createObject.html" class="btn btn-outline-primary btn-lg">Objeto</a>
+                <a href="createScenario.html" class="btn btn-outline-primary btn-lg">Cenário</a>
+            </div>
+        </section>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
 </body>
 
 </html>
