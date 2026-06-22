@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="icon" type="image/x-icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../CSS/navbar.css">
 </head>
 <body>
-    <main class="container py-4">
-        <nav class="mb-3">
-            <ul class="list-unstyled d-flex gap-3 justify-content-center">
-                <li><a href="../../index.html">Início</a></li>
-                <li><a href="inventory.html">Inventário</a></li>
-                <li><a href="../config.html">Configurações</a></li>
-            </ul>
-        </nav>
-
+    <header>
+        <div class="navbar">
+            <div id="logos">
+            <img src="../../imgs/icon.png" alt="icone rpagina">
+            <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li id="nav-item">
+                <li id="nav-item">
+                    <a href="../../index.html">Início</a>
+                </li>
+                <li id="nav-item">
+                        <a href="pages/create/create.html">Criar um elemento</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="pages/perfil/inventory.html">Inventário</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="pages/simulator/createSim.html">Simulação</a>
+                    </li>
+                    <li id="nav-item2">
+                        <a href="../../pages/config.html"><i class="fas fa-gear"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
         <h1 class="h4 text-center mb-4">Perfil</h1>
 
         <div class="card mx-auto" style="max-width:680px;">
