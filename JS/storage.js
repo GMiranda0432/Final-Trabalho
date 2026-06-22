@@ -14,6 +14,8 @@ const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+let vetObjetos = JSON.parse(localStorage.getItem("objetos")) || [];
+let vetCenarios = JSON.parse(localStorage.getItem("cenarios")) || [];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
