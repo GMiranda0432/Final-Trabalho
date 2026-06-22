@@ -31,8 +31,12 @@ header {
     gap: 10px;
 }
 .navbar img{
-    width: 60px;
-    margin-right: -400px;
+    width: 50px;
+}
+
+#logos {
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar strong {
