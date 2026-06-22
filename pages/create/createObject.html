@@ -45,64 +45,84 @@
     <main class="container py-4">
         <h1 class="h4 text-center mb-4">Criar Objeto</h1>
 
-        <form id="charForm">
+        <form id="objForm">
             <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="inNomeO" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="inNomeO" name="nomeO" required>
             </div>
 
             <div class="mb-3">
-                <label for="classe" class="form-label">Classe</label>
-                <select id="classe" name="classe" class="form-select">
-                    <option value="Dano">Dano</option>
-                    <option value="Suporte">Suporte</option>
-                    <option value="Tanque">Tanque</option>
-                    <option value="Mobilidade">Mobilidade</option>
-                    <option value="Benção">Benção</option>
+                <label for="inClasseO" class="form-label">Classe</label>
+                <select id="inClasseO" name="classeO" class="form-select">
+                    <option value="arma">Arma</option>
+                    <option value="suporte">Suporte</option>
+                    <option value="defesa">Defesa</option>
+                    <option value="cura">Cura</option>
+                    <option value="maldicao">Maldição</option>
+                    <option value="consumivel">Consumível</option>
+                    <option value="municao">Munição</option>
+                    <option value="utilidade">Utilidade</option>
+                    <option value="conhecimento">Conhecimento</option>
+                    <option value="companheiro">Companheiro</option>
+                    <option value="ferramenta">Ferramenta</option>
+                    <option value="controle">Controle</option>
+                    <option value="magico">Mágico</option>
+                    <option value="tesouro">Tesouro</option>
+                    <option value="artefato">Artefato</option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="tipo" class="form-label">Tipo</label>
-                <select id="tipo" name="tipo" class="form-select">
-                    <option value="Espada">Arma</option>
-                    <option value="Escudo">Armadura</option>
-                    <option value="Cetro">Cetro</option>
-                    <option value="Jóia">Jóia</option>
-                    <option value="Roupa">Roupa</option>
+                <label for="inTipoO" class="form-label">Tipo</label>
+                <select id="inTipoO" name="tipoO" class="form-select">
+                    <option value="espada">Espada</option>
+                    <option value="escudo">Escudo</option>
+                    <option value="pocao">Poção</option>
+                    <option value="amuleto">Amuleto</option>
+                    <option value="mascote">Mascote</option>
+                    <option value="armadilha">Armadilha</option>
+                    <option value="armadura">Armadura</option>
+                    <option value="flecha">Flecha</option>
+                    <option value="cristal">Cristal</option>
+                    <option value="livro">Livro</option>
+                    <option value="mapa">Mapa</option>
+                    <option value="corrente">Corrente</option>
+                    <option value="arco">Arco</option>
+                    <option value="chave">Chave</option>
+                    <option value="Cajado">Cajado</option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="descricao" class="form-label">Descrição</label>
-                <input type="text" id="descricao" name="descricao" class="form-control">
+                <label for="inDescO" class="form-label">Descrição</label>
+                <input type="text" id="inDescO" name="descO" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label for="historia" class="form-label">História</label>
-                <textarea id="historia" name="historia" class="form-control" rows="4"></textarea>
+                <label for="inHistO" class="form-label">História</label>
+                <textarea id="inHistO" name="HistO" class="form-control" rows="5"></textarea>
             </div>
 <h1>Status - Como afeta seu portador, de forma positiva e/ou negativa</h1>
             <div class="row g-3 mb-3">
                 <div class="col-6 col-md-2">
                     <label class="form-label">Vida</label>
-                    <input type="number" id="vida" name="vida" class="form-control" min="-100" max="100" value="100">
+                    <input type="number" id="inVidaO" name="inVidaO" class="form-control" min="-100" max="100" value="100">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Dano</label>
-                    <input type="number" id="dano" name="dano" class="form-control" min="-100" max="100" value="10">
+                    <input type="number" id="inDanoO" name="inDanoO" class="form-control" min="-100" max="100" value="10">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Defesa</label>
-                    <input type="number" id="defesa" name="defesa" class="form-control" min="-100" max="100" value="10">
+                    <input type="number" id="inDefO" name="inDefO" class="form-control" min="-100" max="100" value="10">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Sorte</label>
-                    <input type="number" id="sorte" name="sorte" class="form-control" min="-100" max="100" value="5">
+                    <input type="number" id="inSorteO" name="inSorteO" class="form-control" min="-100" max="100" value="5">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Velocidade</label>
-                    <input type="number" id="velocidade" name="velocidade" class="form-control" min="-100" max="100" value="15">
+                    <input type="number" id="inVeloO" name="inVeloO" class="form-control" min="-100" max="100" value="15">
                 </div>
             </div>
 
@@ -115,12 +135,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../JS/storage.js"></script>
-    <script src="../../JS/script.js"></script>
-</body>
-
-</html>delivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="../../JS/create.js"></script>
 </body>
 
 </html>
