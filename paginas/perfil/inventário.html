@@ -50,9 +50,26 @@
     <main id="containerPersonagens" class="container py-4">
         <h1 class="h4 text-center mb-4">Inventário</h1>
 
+<input type="text" id="inPesquisaNome" class="form-control mb-3" placeholder="Pesquisar por nome...">
+<select id="inPesquisaTipo" class="form-select mb-3" placeholder="Selecione um tipo">
+    <option value="">Todos os tipos</option>
+    <option value="personagem">Personagem</option>
+    <option value="objeto">Objeto</option>
+    <option value="zona">Zona</option>
+</select>
+<button id="btnPesquisar" class="btn btn-primary">Pesquisar</button>
+
         <div id="msgVazio" class="text-center mt-5">
-            <p class="fs-4">vazio, igual meu coração</p>
+            <p class="fs-4">Vazio, igual seu coração :P</p>
             <p class="text-muted">Crie seu primeiro elemento para vê-lo aparecer aqui.</p>
+        </div>
+
+    <div id="listaPersonagens" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    </div>
+    <div id="listaObjetos" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    </div>
+    <div id="listaAreas" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+    </div>
         </div>
     </main>
 

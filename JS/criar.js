@@ -75,6 +75,31 @@ personaForm.addEventListener("submit", function (event) {
         inVeloP.focus();
         return;
     }
+    if (inVidaP.value > 100) {
+        alert("Seu personagem não pode ter tanta energia, digite um valor entre 1 e 100 para vida");
+        inVidaP.focus();
+        return;
+    }
+    if (inDanoP.value > 100) {
+        alert("Seu personagem não pode ser tão poderoso, digite um valor entre 1 a 100 para dano");
+        inDanoP.focus();
+        return;
+    }
+    if (inDefP.value > 100) {
+        alert("Seu personagem não pode ser tão denso, digite um valor entre 1 e 100 para defesa");
+        inDefP.focus();
+        return;
+    }
+    if (inSorteP.value > 100) {
+        alert("Nesse mundo cruel, seu personagem não pode ser agraciado com meta-game, digite um valor entre 1 e 100 para sorte");
+        inSorteP.focus();
+        return;
+    }
+    if (inVeloP.value > 100) {
+        alert("Não se pode ser tão rápido nos dias de hoje, por favor digite um valor entre 0 a 100 para velocidade");
+        inVeloP.focus();
+        return;
+    }
 
     let persona = {
         id: Date.now(),
