@@ -7,6 +7,19 @@
     --borda: 25px;
 }
 
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 header {
     width: 100%;
     padding: 1.5rem 1.5rem;
@@ -18,7 +31,7 @@ header {
 }
 
 .navbar {
-    font-size: 20px;
+    font-size: 25px;
     border-radius: var(--borda);
     padding: 1rem;
     background-color: var(--cor-secundaria);
@@ -44,9 +57,10 @@ header {
 }
 
 .nav-list {
+    font-family: "jersey 15";
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }

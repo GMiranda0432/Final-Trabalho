@@ -1,6 +1,8 @@
 body {
     background-image: url(../imgs/fundo.jpg);
     background-size: cover;
+    background-size:auto;
+    background-repeat: no-repeat;
 }
 
 .tiny5-regular {
@@ -16,9 +18,8 @@ body {
 
 h2 {
     font-family: "Jersey 15", sans-serif;
-    font-size: 4rem;
     font-weight: 700;
-    background: linear-gradient(180deg, green, blue);
+    background: linear-gradient(180deg, rgb(231, 142, 142), rgb(218, 47, 47));
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
