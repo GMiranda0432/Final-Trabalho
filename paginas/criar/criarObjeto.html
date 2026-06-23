@@ -11,42 +11,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="../../CSS/navbar.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="../../recursos/imgs/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-    <div class="navbar">
-        <div id="logos">
-            <img src="../../imgs/icon.png" alt="icone rpagina">
-            <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
+        <div class="navbar">
+            <div id="logos">
+                <img src="../../recursos/imgs/favicon.png" alt="icone rpagina">
+                <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
             </div>
 
-        <nav>
-            <ul class="nav-list">
-                <li id="nav-item">
-                    <a href="../../index.html">Início</a>
-                </li>
-                <li id="nav-item">
-                    <a href="../perfil/inventory.html">Inventário</a>
-                </li>
-                <li id="nav-item">
-                    <a href="../simulator/createSim.html">Simulação</a>
-                </li>
-                    <li id="nav-item2">
-                        <a href="pages/perfil/account.html"><i class="fas fa-user"></i></a>
+            <nav>
+                <ul class="nav-list">
+                    <li id="nav-item">
+                        <a href="../../index.html">Início</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="../perfil/inventário.html">Inventário</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="../simulador/criarSimulacao.html">Simulação</a>
                     </li>
                     <li id="nav-item2">
-                        <a href="pages/config.html"><i class="fas fa-gear"></i></a>
+                        <a href="../perfil/perfil.html"><i class="fas fa-user"></i></a>
                     </li>
-            </ul>
-        </nav>
+                    <li id="nav-item2">
+                        <a href="../perfil/config.html"><i class="fas fa-gear"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="container py-4">
@@ -109,15 +107,17 @@
                 <label for="inHistO" class="form-label">História</label>
                 <textarea id="inHistO" name="HistO" class="form-control" rows="5"></textarea>
             </div>
-<h1>Status - Como afeta seu portador, de forma positiva e/ou negativa</h1>
+            <h1>Status - Como afeta seu portador, de forma positiva e/ou negativa</h1>
             <div class="row g-3 mb-3">
                 <div class="col-6 col-md-2">
                     <label class="form-label">Vida</label>
-                    <input type="number" id="inVidaO" name="inVidaO" class="form-control" min="-100" max="100" value="100">
+                    <input type="number" id="inVidaO" name="inVidaO" class="form-control" min="-100" max="100"
+                        value="100">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Dano</label>
-                    <input type="number" id="inDanoO" name="inDanoO" class="form-control" min="-100" max="100" value="10">
+                    <input type="number" id="inDanoO" name="inDanoO" class="form-control" min="-100" max="100"
+                        value="10">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Defesa</label>
@@ -125,11 +125,13 @@
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Sorte</label>
-                    <input type="number" id="inSorteO" name="inSorteO" class="form-control" min="-100" max="100" value="5">
+                    <input type="number" id="inSorteO" name="inSorteO" class="form-control" min="-100" max="100"
+                        value="5">
                 </div>
                 <div class="col-6 col-md-2">
                     <label class="form-label">Velocidade</label>
-                    <input type="number" id="inVeloO" name="inVeloO" class="form-control" min="-100" max="100" value="15">
+                    <input type="number" id="inVeloO" name="inVeloO" class="form-control" min="-100" max="100"
+                        value="15">
                 </div>
             </div>
 
@@ -142,7 +144,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../JS/create.js"></script>
+    <script src="../../JS/criar.js"></script>
 </body>
 
 </html>

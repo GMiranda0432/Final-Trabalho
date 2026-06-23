@@ -11,42 +11,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="../../CSS/navbar.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="../../recursos/imgs/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-    <div class="navbar">
-        <div id="logos">
-            <img src="../../imgs/icon.png" alt="icone rpagina">
-            <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
+        <header>
+        <div class="navbar">
+            <div id="logos">
+                <img src="../../recursos/imgs/favicon.png" alt="icone rpagina">
+                <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
             </div>
 
-        <nav>
-            <ul class="nav-list">
-                <li id="nav-item">
-                    <a href="../../index.html">Início</a>
-                </li>
-                <li id="nav-item">
-                    <a href="../perfil/inventory.html">Inventário</a>
-                </li>
-                <li id="nav-item">
-                    <a href="../simulator/createSim.html">Simulação</a>
-                </li>
-                    <li id="nav-item2">
-                        <a href="pages/perfil/account.html"><i class="fas fa-user"></i></a>
+            <nav>
+                <ul class="nav-list">
+                    <li id="nav-item">
+                        <a href="../../index.html">Início</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="../perfil/inventário.html">Inventário</a>
+                    </li>
+                    <li id="nav-item">
+                        <a href="../simulador/criarSimulacao.html">Simulação</a>
                     </li>
                     <li id="nav-item2">
-                        <a href="pages/config.html"><i class="fas fa-gear"></i></a>
+                        <a href="../perfil/perfil.html"><i class="fas fa-user"></i></a>
                     </li>
-            </ul>
-        </nav>
+                    <li id="nav-item2">
+                        <a href="../perfil/config.html"><i class="fas fa-gear"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="container py-4">
@@ -64,17 +64,17 @@
                     <option value="pequeno">Pequeno</option>
                     <option value="medio">Médio</option>
                     <option value="grande">Grande</option>
-                    </select>
+                </select>
             </div>
 
             <div class="mb-3">
                 <label for="tipo" class="form-label">Tipo</label>
                 <select id="tipo" name="tipo" class="form-select">
-                    <option value="Ilha">Ilha</option>
-                    <option value="Estrutura">Estrutura</option>
-                    <option value="Floresta">Floresta</option>
-                    <option value="Caverna">Caverna</option>
-                    <option value="Montanha">Montanha</option>
+                    <option value="ilha">Ilha</option>
+                    <option value="estrutura">Estrutura</option>
+                    <option value="floresta">Floresta</option>
+                    <option value="caverna">Caverna</option>
+                    <option value="montanha">Montanha</option>
                 </select>
             </div>
 
@@ -88,14 +88,14 @@
                 <textarea id="historia" name="historia" class="form-control" rows="4"></textarea>
             </div>
 
-<h1>Efeitos - como afeta os personagens nesse ambiente?</h1>
+            <h1>Efeitos - como afeta os personagens nesse ambiente?</h1>
 
-<!-- falta ter ideia de implementar isso : P-->
+            <!-- falta ter ideia de implementar isso : P-->
         </form>
 
         <div id="msg" class="mt-3"></div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../JS/create.js"></script>
+    <script src="../../JS/criar.js"></script>
 </body>
