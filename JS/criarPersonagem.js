@@ -14,93 +14,75 @@ const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
-let vetObjetos = JSON.parse(localStorage.getItem("objetos")) || [];
-let vetCenarios = JSON.parse(localStorage.getItem("cenarios")) || [];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (inNomeP.value.trim() === "") {
+   if (inNomeP.value.trim() == "") {
         alert("O nome do personagem da sua ficha não pode ser invisível");
         inNomeP.focus();
         return;
     }
-    if (inDescP.value.trim() === "") {
-        alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência")
+    if (inDescP.value.trim() == "") {
+        alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência");
         inDescP.focus();
         return;
     }
-    if (inBioP.value.trim() === "") {
-        alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG")
+    if (inBioP.value.trim() == "") {
+        alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
         return;
     }
-    if (inClasseP.value === "") {
-        alert("Por favor, selecione uma classe para o seu personagem!");
-        inClasseP.focus();
-        return;
-    }
-    if (inRacaP.value === "") {
-        alert("Por favor, nos informe a raça do seu personagem!");
-        inRacaP.focus();
-        return;
-    }
-    if (inSexoP.value === "") {
-        alert("Por favor, informe o sexo do personagem, mesmo que seja desconhecido");
-        inSexoP.focus();
-        return;
-    }
     if (inVidaP.value < 1) {
-        alert("Seu personagem precisa de vida para ser criado, digite um valor entre 1 e 100 para vida");
+        alert("Nesse mundo até espiritos tem mais vida que isso... por favor, digite um valor maior que 0");
         inVidaP.focus();
         return;
     }
     if (inDanoP.value < 1) {
-        alert("Seu personagem precisa de conseguir atacar ainda, digite um valor entre 1 a 100 para dano");
+        alert("Nem uma colher de sopa bate tão fraco... por favor, digite um valor maior que 0");
         inDanoP.focus();
         return;
     }
     if (inDefP.value < 1) {
-        alert("Seu personagem precisa de forças para sobreviver e se defender, digite um valor entre 1 e 100 para defesa");
+        alert("Vestir papelão não conta como armadura... por favor, digite um valor maior que 0");
         inDefP.focus();
         return;
     }
     if (inSorteP.value < 1) {
-        alert("Todos tem o mínimo de sorte existente, é essencial para viver nesse mundo, digite um valor entre 1 e 100 para sorte");
+        alert("Com essa sorte, até moedas caem de pé... por favor, digite um valor maior que 0");
         inSorteP.focus();
         return;
     }
     if (inVeloP.value < 1) {
-        alert("É necessário ter o mínimo de velocidade para conseguir se locomover, por favor digite um valor entre 0 a 100 para velocidade");
+        alert("Seu personagem é mais lento que uma estátua... por favor, digite um valor maior que 0");
         inVeloP.focus();
         return;
     }
     if (inVidaP.value > 100) {
-        alert("Seu personagem não pode ter tanta energia, digite um valor entre 1 e 100 para vida");
+        alert("Você criou um tanque de guerra, não um personagem... por favor, digite um valor menor que 101");
         inVidaP.focus();
         return;
     }
     if (inDanoP.value > 100) {
-        alert("Seu personagem não pode ser tão poderoso, digite um valor entre 1 a 100 para dano");
+        alert("Calma aí, destruidor de mundos... por favor, digite um valor menor que 101");
         inDanoP.focus();
         return;
     }
     if (inDefP.value > 100) {
-        alert("Seu personagem não pode ser tão denso, digite um valor entre 1 e 100 para defesa");
+        alert("Castelos medievais não têm tanta proteção... por favor, digite um valor menor que 101");
         inDefP.focus();
         return;
     }
     if (inSorteP.value > 100) {
-        alert("Nesse mundo cruel, seu personagem não pode ser agraciado com meta-game, digite um valor entre 1 e 100 para sorte");
+        alert("Não minta, Nem os dados conseguem tanta sorte... por favor, digite um valor menor que 101");
         inSorteP.focus();
         return;
     }
     if (inVeloP.value > 100) {
-        alert("Não se pode ser tão rápido nos dias de hoje, por favor digite um valor entre 0 a 100 para velocidade");
+        alert("Seu personagem ultrapassou a velocidade do roteiro... por favor, digite um valor menor que 101");
         inVeloP.focus();
         return;
     }
-
     let persona = {
         id: Date.now(),
         nome: inNomeP.value.trim(),

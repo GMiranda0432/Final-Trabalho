@@ -1,5 +1,5 @@
 const inPesquisaNome = document.getElementById("inPesquisaNome");
-const inPesquisaTipo = document.getElementById("inPesquisaTipo");
+const inPesquisaSexo = document.getElementById("inPesquisaSexo");
 const msgVazio = document.getElementById("msgVazio");
 const listaPersonagens = document.getElementById("listaPersonagens");
 const listaObjetos = document.getElementById("listaObjetos");
@@ -21,7 +21,6 @@ function renderizarLista() {
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">${personaAtual.nome}</h5>
-                            
                             <p class="card-text">Classe: ${personaAtual.classe}</p>
                             <p class="card-text">Raça: ${personaAtual.raca}</p>
                             <p class="card-text">Sexo: ${personaAtual.sexo}</p>
@@ -41,7 +40,6 @@ function renderizarLista() {
                 </div>
             `;
         }
-
     } else {
         msgVazio.style.display = "block";
     }
@@ -71,7 +69,7 @@ listaPersonagens.addEventListener("click", function (event) {
 
 btnPesquisar.addEventListener("click", function () {
 const PesquisaNome = inPesquisaNome.value.trim().toLowerCase();
-const PesquisaTipo = inPesquisaTipo.value;
+const PesquisaSexo = inPesquisaSexo.value;
 let idPesquisa = false;
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
 listaPersonagens.innerHTML = "";
@@ -81,9 +79,9 @@ listaPersonagens.innerHTML = "";
                 let nomeAtual = personaAtual.nome.toLowerCase();
 
                 let nomeIgual = nomeAtual.includes(PesquisaNome);
-                let tipoIgual = PesquisaTipo === "" || PesquisaTipo === "personagem";
+                let sexoIgual = PesquisaSexo === "tudo" || PesquisaSexo === "masculino" || PesquisaSexo === "feminino" || PesquisaSexo === "intersex"|| PesquisaSexo === "desconhecido" ;
 
-                if (nomeIgual && tipoIgual) {
+                if (nomeIgual && sexoIgual) {
                     idPesquisa = true;
                       listaPersonagens.innerHTML += `
                 <div class="col">

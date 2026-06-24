@@ -53,13 +53,15 @@
         <form id="objForm">
             <div class="mb-3">
                 <label for="inNomeO" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="inNomeO" name="nomeO" required>
+                <input type="text" required class="form-control" id="inNomeO" name="nomeO" placeholder="Ex: Excalibur">
             </div>
 
             <div class="mb-3">
                 <label for="inClasseO" class="form-label">Classe</label>
-                <select id="inClasseO" name="classeO" class="form-select">
-                    <option value="arma">Arma</option>
+                <select id="inClasseO" required name="classeO" class="form-select">
+                    <option value="" disabled hidden selected>-- Selecione uma opção de classe--</option>
+
+                    <option value="dano">Dano</option>
                     <option value="suporte">Suporte</option>
                     <option value="defesa">Defesa</option>
                     <option value="cura">Cura</option>
@@ -79,7 +81,8 @@
 
             <div class="mb-3">
                 <label for="inTipoO" class="form-label">Tipo</label>
-                <select id="inTipoO" name="tipoO" class="form-select">
+                <select id="inTipoO" required name="tipoO" class="form-select">
+                    <option value="" disabled hidden selected>-- Selecione uma opção tipo de objeto--</option>
                     <option value="espada">Espada</option>
                     <option value="escudo">Escudo</option>
                     <option value="pocao">Poção</option>
@@ -100,34 +103,44 @@
 
             <div class="mb-3">
                 <label for="inDescO" class="form-label">Descrição</label>
-                <input type="text" id="inDescO" name="descO" class="form-control">
+                <input type="text" id="inDescO" name="descO" class="form-control" required placeholder="Dê uma descrição da aparência e utilidade do objeto">
             </div>
 
             <div class="mb-3">
                 <label for="inHistO" class="form-label">História</label>
-                <textarea id="inHistO" name="HistO" class="form-control" rows="5"></textarea>
+                <textarea id="inHistO" name="HistO" class="form-control" rows="5" required placeholder="Dê uma história de origem e explicação de lore ao objeto"></textarea>
             </div>
             <h1>Status - Como afeta seu portador, de forma positiva e/ou negativa</h1>
             <div class="row g-3 mb-3">
                 <div class="col-6 col-md-2">
-                    <label class="form-label">Vida</label>
-                    <input type="number" id="inVidaO" name="inVidaO" class="form-control" min="-100" max="100">
+                    <label class="form-label"><h4>Vida</h4></label><br>
+                    <label class="form-label">Valor positivo = cura</label>
+                    <label class="form-label">Valor negativo = dano</label>
+                    <input type="number" id="inVidaO" name="inVidaO" class="form-control" min="-100" max="100" required placeholder="Ex: -20 para que o objeto retire vida">
                 </div>
                 <div class="col-6 col-md-2">
-                    <label class="form-label">Dano</label>
-                    <input type="number" id="inDanoO" name="inDanoO" class="form-control" min="-100" max="100">
+                    <label class="form-label"><h4>Dano</h4></label><br>
+                    <label class="form-label">Valor positivo = Força</label>
+                    <label class="form-label">Valor negativo = Fraqueza</label>
+                    <input type="number" id="inDanoO" name="inDanoO" class="form-control" min="-100" max="100" required  placeholder="Ex: -20 para que o objeto diminua dano do afetado">
                 </div>
                 <div class="col-6 col-md-2">
-                    <label class="form-label">Defesa</label>
-                    <input type="number" id="inDefO" name="inDefO" class="form-control" min="-100" max="100">
+                    <label class="form-label"><h4>Defesa</h4></label>
+                    <label class="form-label">Valor positivo = Escudo</label>
+                    <label class="form-label">Valor negativo = Estilhaço</label>
+                    <input type="number" id="inDefO" name="inDefO" class="form-control" min="-100" max="100" required placeholder="Ex: -20 para que o objeto retire defesa">
                 </div>
                 <div class="col-6 col-md-2">
-                    <label class="form-label">Sorte</label>
-                    <input type="number" id="inSorteO" name="inSorteO" class="form-control" min="-100" max="100">
+                    <label class="form-label"><h4>Sorte</h4></label><br>
+                    <label class="form-label">Valor positivo = Benção</label>
+                    <label class="form-label">Valor negativo = Azar</label>
+                    <input type="number" id="inSorteO" name="inSorteO" class="form-control" min="-100" max="100" required placeholder="Ex: -20 para que o objeto cause azar">
                 </div>
                 <div class="col-6 col-md-2">
-                    <label class="form-label">Velocidade</label>
-                    <input type="number" id="inVeloO" name="inVeloO" class="form-control" min="-100" max="100">
+                    <label class="form-label"><h4>Velocidade</h4></label>
+                    <label class="form-label">Valor positivo = Rápidez</label>
+                    <label class="form-label">Valor negativo = Lerdeza</label>
+                    <input type="number" id="inVeloO" name="inVeloO" class="form-control" min="-100" max="100" required placeholder="Ex: -20 para que o objeto deixe o afetado mais lento">
                 </div>
             </div>
 
