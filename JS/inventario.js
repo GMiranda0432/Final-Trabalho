@@ -1,5 +1,6 @@
-const inPesquisaNome = document.getElementById("inPesquisaNome");
-const inPesquisaSexo = document.getElementById("inPesquisaSexo");
+const inPesquisaClasse = document.getElementById("inPesquisaClasse");
+const inPesquisaVida = document.getElementById("inPesquisaVida");
+const inTipoFiltroVida = document.getElementById("inTipoFiltroVida")
 const msgVazio = document.getElementById("msgVazio");
 const listaPersonagens = document.getElementById("listaPersonagens");
 const listaObjetos = document.getElementById("listaObjetos");
@@ -50,17 +51,17 @@ renderizarLista();
 listaPersonagens.addEventListener("click", function (event) {
     if (event.target.classList.contains("btn-excluir")) {
         const idDeletar = Number(event.target.getAttribute("idPersona"));
-        
+
         if (confirm("Tem certeza que deseja apagar este personagem?")) {
             let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
             let novoVetPersonas = [];
-            
+
             for (var i = 0; i < vetPersonas.length; i++) {
                 if (vetPersonas[i].id !== idDeletar) {
                     novoVetPersonas[novoVetPersonas.length] = vetPersonas[i];
                 }
             }
-            
+
             localStorage.setItem("personagens", JSON.stringify(novoVetPersonas));
             renderizarLista();
         }
@@ -68,27 +69,53 @@ listaPersonagens.addEventListener("click", function (event) {
 });
 
 btnPesquisar.addEventListener("click", function () {
-const PesquisaNome = inPesquisaNome.value.trim().toLowerCase();
-const PesquisaSexo = inPesquisaSexo.value;
-let idPesquisa = false;
-let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
-listaPersonagens.innerHTML = "";
+    const pesquisaClasse = inPesquisaClasse.value;
+    const pesquisaVida = inPesquisaVida.value;
+    const tipoVida = inTipoFiltroVida.value;
+    listaPersonagens.innerHTML = "";
 
-            for (var i = 0; i < vetPersonas.length; i++) {
-                let personaAtual = vetPersonas[i];
-                let nomeAtual = personaAtual.nome.toLowerCase();
+    let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+    let novoVetPersonas = [];
 
-                let nomeIgual = nomeAtual.includes(PesquisaNome);
-                let sexoIgual = PesquisaSexo === "tudo" || PesquisaSexo === "masculino" || PesquisaSexo === "feminino" || PesquisaSexo === "intersex"|| PesquisaSexo === "desconhecido" ;
+    for (var i = 0; i < vetPersonas.length; i++) {
+        let personaAtual = vetPersonas[i];
+        let condClasse = false;
 
-                if (nomeIgual && sexoIgual) {
-                    idPesquisa = true;
-                      listaPersonagens.innerHTML += `
+        if (pesquisaClasse == "tudoClasse") {
+            condClasse = true;
+        } else if (personaAtual.classe == pesquisaClasse) {
+            condClasse = true;
+        }
+        let condVida = false;
+        if (pesquisaVida == "") {
+            condVida = true;
+        } else {
+            let valorPesquisaVida = Number(pesquisaVida);
+            let valorPersonaVida = Number(personaAtual.vida);
+
+            if (tipoVida == "maior" && valorPersonaVida >= valorPesquisaVida) {
+                condVida = true;
+            } else if (tipoVida == "menor" && valorPersonaVida <= valorPesquisaVida) {
+                condVida = true;
+            }
+        }
+
+        if (condClasse == true && condVida == true) {
+            novoVetPersonas[novoVetPersonas.length] = personaAtual;
+        }
+    }
+
+    if (novoVetPersonas.length > 0) {
+        msgVazio.style.display = "none";
+
+        for (var j = 0; j < novoVetPersonas.length; j++) {
+            let personaAtual = novoVetPersonas[j];
+
+            listaPersonagens.innerHTML += `
                 <div class="col">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">${personaAtual.nome}</h5>
-                            
                             <p class="card-text">Classe: ${personaAtual.classe}</p>
                             <p class="card-text">Raça: ${personaAtual.raca}</p>
                             <p class="card-text">Sexo: ${personaAtual.sexo}</p>
@@ -107,12 +134,8 @@ listaPersonagens.innerHTML = "";
                     </div>
                 </div>
             `;
-                }
-            }
-            if (idPesquisa) {
-                 msgVazio.style.display = "none";
-                } else {
-                    msgVazio.style.display = "block";
-                }
-            }
-        );
+        }
+    } else {
+        msgVazio.style.display = "block";
+    }
+});
