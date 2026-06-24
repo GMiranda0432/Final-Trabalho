@@ -48,7 +48,7 @@ personaForm.addEventListener("submit", function (event) {
         velocidade: Number(inVeloP.value)
 
     };
-    vetPersonas.push(persona);
+    vetPersonas[vetPersonas.length] = persona;
     localStorage.setItem(
         "personagens",
         JSON.stringify(vetPersonas)

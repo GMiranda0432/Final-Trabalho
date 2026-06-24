@@ -30,12 +30,13 @@ objForm.addEventListener("submit", function (event) {
     if (inHistO.value.trim() == "") {
         alert("Dê uma história de origem de criação ao seu objeto, seja criativo amigo");
         inHistO.focus();
+        return;
     }
 let obj = {
     id:Date.now(),
-    nome: inNomeO.value.trim,
-    descricao: inDescO.value.trim,
-    historia: inHistO.value.trim,
+    nome: inNomeO.value.trim(),
+    descricao: inDescO.value.trim(),
+    historia: inHistO.value.trim(),
     classe: inClasseO.value,
     tipo: inTipoO.value,
     vida: Number(inVidaO.value),
