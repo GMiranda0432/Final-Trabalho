@@ -1,7 +1,7 @@
 @import url(root.css);
 
 body {
-    background-image: url(../recursos/imgs/fundo_dia.png);
+    background-image: url(../recursos/imgs/fundo_noite.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -20,7 +20,7 @@ body {
 h2 {
     font-family: "Jersey 15", sans-serif;
     font-weight: 700;
-    background: linear-gradient(180deg, rgb(231, 142, 142), rgb(218, 47, 47));
+    background: linear-gradient(180deg, rgb(86, 61, 92), rgb(139, 60, 204));
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -29,12 +29,13 @@ h2 {
 }
 
 main {
+  color: #5b2092;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #mainTop {
   background-color: var(--transp-primaria);
   border-style:outset;
-  border-color: rgba(97, 12, 12, 0.616);
+  border-color: var(--cor-destaque-transp);;
   padding: 1rem;
   border-radius: var(--borda);
 }
@@ -42,6 +43,6 @@ main {
   background-color: var(--transp-primaria); 
   padding: 2rem;
   border-style:outset;
-  border-color: rgba(97, 12, 12, 0.26);
+  border-color: var(--cor-destaque-transp);
   border-radius: var(--borda)
 }
