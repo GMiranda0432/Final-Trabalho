@@ -2,8 +2,7 @@
 
 body {
     background-image: url(../recursos/imgs/fundo_noite.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .tiny5-regular {
@@ -35,14 +34,15 @@ main {
 #mainTop {
   background-color: var(--transp-primaria);
   border-style:outset;
-  border-color: var(--cor-destaque-transp);;
+  border-color: var(--cor-destaque-transp);
   padding: 1rem;
   border-radius: var(--borda);
+  backdrop-filter: blur(var(--blur))
 }
 #mainConteudo {
   background-color: var(--transp-primaria); 
   padding: 2rem;
   border-style:outset;
   border-color: var(--cor-destaque-transp);
-  border-radius: var(--borda)
+  border-radius: var(--borda);
 }
