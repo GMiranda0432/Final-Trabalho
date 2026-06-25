@@ -13,7 +13,8 @@ const inDefP = document.getElementById("inDefP");
 const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
-let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+
+let vetPersonas = JSON.parse(localStorage.getItem("personagens")) ||[];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
