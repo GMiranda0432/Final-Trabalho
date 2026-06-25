@@ -51,9 +51,9 @@
     </header>
     <main id="containerElementos" class="container py-4">
         <h1 class="h4 text-center mb-4">Inventário</h1>
-<input type="number" id="inPesquisaVida" class="form-control mb-3" placeholder="Digite o valor da vida">
+<input type="number" id="inPesquisaVida" placeholder="Digite o valor da vida">
 
-    <select id="inTipoFiltroVida" class="form-select mb-3">
+    <select id="inTipoFiltroVida">
        <option value="maior" selected>Vida Maior ou igual que:</option>
         <option value="menor">Vida menor ou igual que:</option>
     </select>
@@ -86,7 +86,7 @@
             <option value="alquimista">Alquimista</option>
         </select>
         <button id="btnPesquisar" class="btn btn-primary">Pesquisar</button>
-
+        <audio id="somSucesso" src="../../JS/vitoria.mp3"></audio>
         <div id="msgVazio" class="text-center mt-5">
             <p class="fs-4">Vazio, igual seu coração :P</p>
             <p class="text-muted">Crie seu primeiro elemento para vê-lo aparecer aqui.</p>

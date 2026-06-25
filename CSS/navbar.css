@@ -46,6 +46,7 @@ header {
 }
 
 #logos {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
 }

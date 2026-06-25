@@ -1,11 +1,15 @@
 const inPesquisaClasse = document.getElementById("inPesquisaClasse");
 const inPesquisaVida = document.getElementById("inPesquisaVida");
 const inTipoFiltroVida = document.getElementById("inTipoFiltroVida")
+
 const msgVazio = document.getElementById("msgVazio");
+
 const listaPersonagens = document.getElementById("listaPersonagens");
 const listaObjetos = document.getElementById("listaObjetos");
 const listaAreas = document.getElementById("listaAreas");
+
 const btnPesquisar = document.getElementById("btnPesquisar");
+const somSucesso = document.getElementById("somSucesso");
 
 function renderizarLista() {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
@@ -53,6 +57,7 @@ listaPersonagens.addEventListener("click", function (event) {
         const idDeletar = Number(event.target.getAttribute("idPersona"));
 
         if (confirm("Tem certeza que deseja apagar este personagem?")) {
+    somSucesso.play();
             let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
             let novoVetPersonas = [];
 
@@ -77,6 +82,7 @@ btnPesquisar.addEventListener("click", function () {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
     let novoVetPersonas = [];
 
+    somSucesso.play();
     for (var i = 0; i < vetPersonas.length; i++) {
         let personaAtual = vetPersonas[i];
         let condClasse = false;
