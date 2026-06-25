@@ -41,6 +41,9 @@ header {
     border-style:outset;
     border-color: #4f2958ad;
 }
+.navbar h1{
+    color: var(--agina)
+}
 .navbar img{
     width: 50px;
 }
