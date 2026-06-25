@@ -1,9 +1,8 @@
 @import url(root.css);
 
 body {
-    background-image: url(../recursos/imgs/fundo_dia.jpg);
+    background-image: url(../recursos/imgs/fundo_dia.png);
     background-size: cover;
-    background-size:auto;
     background-repeat: no-repeat;
 }
 
@@ -32,17 +31,17 @@ h2 {
 main {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+#mainTop {
+  background-color: var(--transp-primaria);
+  border-style:outset;
+  border-color: rgba(97, 12, 12, 0.616);
+  padding: 1rem;
+  border-radius: var(--borda);
+}
 #mainConteudo {
   background-color: var(--transp-primaria); 
   padding: 2rem;
-  border-style: double;
+  border-style:outset;
+  border-color: rgba(97, 12, 12, 0.26);
   border-radius: var(--borda)
-}
-
-#mainTop {
-  background-color: var(--transp-primaria);
-  border-style:double;
-  border-radius: var(--borda);
-
 }
