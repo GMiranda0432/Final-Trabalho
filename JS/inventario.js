@@ -148,9 +148,11 @@ btnPesquisar.addEventListener("click", function () {
             let valorPesquisaVida = Number(pesquisaVida);
             let valorPersonaVida = Number(personaAtual.vida);
 
-            if (tipoVida == "vidaMaior" && valorPersonaVida >= valorPesquisaVida) {
+            if (tipoVida == "vidaMaior" && valorPersonaVida > valorPesquisaVida) {
                 condVida = true;
-            } else if (tipoVida == "vidaMenor" && valorPersonaVida <= valorPesquisaVida) {
+            } else if (tipoVida == "vidaMenor" && valorPersonaVida < valorPesquisaVida) {
+                condVida = true;
+            } else if (tipoVida == "vidaIgual" && valorPersonaVida == valorPesquisaVida) {
                 condVida = true;
             }
         }
@@ -161,9 +163,11 @@ btnPesquisar.addEventListener("click", function () {
             let valorPesquisaDano = Number(pesquisaDano);
             let valorPersonaDano = Number(personaAtual.dano);
 
-            if (tipoDano == "danoMaior" && valorPersonaDano >= valorPesquisaDano) {
+            if (tipoDano == "danoMaior" && valorPersonaDano > valorPesquisaDano) {
                 condDano = true;
-            } else if (tipoDano == "danoMenor" && valorPersonaDano <= valorPesquisaDano) {
+            } else if (tipoDano == "danoMenor" && valorPersonaDano < valorPesquisaDano) {
+                condDano = true;
+            } else if (tipoDano == "danoIgual" && valorPersonaDano == valorPesquisaDano) {
                 condDano = true;
             }
         }
@@ -174,9 +178,11 @@ btnPesquisar.addEventListener("click", function () {
             let valorPesquisaDef = Number(pesquisaDef);
             let valorPersonaDef = Number(personaAtual.defesa);
 
-            if (tipoDef == "defMaior" && valorPersonaDef >= valorPesquisaDef) {
+            if (tipoDef == "defMaior" && valorPersonaDef > valorPesquisaDef) {
                 condDef = true;
-            } else if (tipoDef == "defMenor" && valorPersonaDef <= valorPesquisaDef) {
+            } else if (tipoDef == "defMenor" && valorPersonaDef < valorPesquisaDef) {
+                condDef = true;
+            } else if (tipoDef == "defIgual" && valorPersonaDef == valorPesquisaDef) {
                 condDef = true;
             }
         }
@@ -187,9 +193,11 @@ btnPesquisar.addEventListener("click", function () {
             let valorPesquisaSorte = Number(pesquisaSorte);
             let valorPersonaSorte = Number(personaAtual.sorte);
 
-            if (tipoSorte == "sorteMaior" && valorPersonaSorte >= valorPesquisaSorte) {
+            if (tipoSorte == "sorteMaior" && valorPersonaSorte > valorPesquisaSorte) {
                 condSorte = true;
-            } else if (tipoSorte == "sorteMenor" && valorPersonaSorte <= valorPesquisaSorte) {
+            } else if (tipoSorte == "sorteMenor" && valorPersonaSorte < valorPesquisaSorte) {
+                condSorte = true;
+            } else if (tipoSorte == "sorteIgual" && valorPersonaSorte == valorPesquisaSorte) {
                 condSorte = true;
             }
         }
@@ -200,9 +208,11 @@ btnPesquisar.addEventListener("click", function () {
             let valorPesquisaVelo = Number(pesquisaVelo);
             let valorPersonaVelo = Number(personaAtual.velocidade);
 
-            if (tipoVelo == "veloMaior" && valorPersonaVelo >= valorPesquisaVelo) {
+            if (tipoVelo == "veloMaior" && valorPersonaVelo > valorPesquisaVelo) {
                 condVelo = true;
-            } else if (tipoVelo == "veloMenor" && valorPersonaVelo <= valorPesquisaVelo) {
+            } else if (tipoVelo == "veloMenor" && valorPersonaVelo < valorPesquisaVelo) {
+                condVelo = true;
+            } else if (tipoVelo == "veloIgual" && valorPersonaVelo == valorPesquisaVelo) {
                 condVelo = true;
             }
         }

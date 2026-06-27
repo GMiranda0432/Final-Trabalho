@@ -123,36 +123,42 @@
                     <option value="intersex">Intersex</option>
                     <option value="desconhecido">Desconhecido</option>
                 </select>
-
-                <input type="number" id="inPesquisaVida" placeholder="Digite o valor da vida">
                 <select id="inTipoFiltroVida">
-                    <option value="vidaMaior" selected>Vida Maior ou igual que:</option>
-                    <option value="vidaMenor">Vida menor ou igual que:</option>
+                    <option value="vidaIgual" selected>Vida Igual a:</option>
+                    <option value="vidaMaior">Vida Maior que:</option>
+                    <option value="vidaMenor">Vida menor que:</option>
                 </select>
+                <input type="number" id="inPesquisaVida" placeholder="Digite o valor da vida">
 
-                <input type="number" id="inPesquisaDano" placeholder="Digite o valor do dano">
                 <select id="inTipoFiltroDano">
-                    <option value="danoMaior" selected>Dano Maior ou igual que:</option>
-                    <option value="danoMenor">Dano menor ou igual que:</option>
+                    <option value="danoigual" selected>Dano igual a:</option>
+                    <option value="danoMaior">Dano Maior que:</option>
+                    <option value="danoMenor">Dano menor que:</option>
                 </select>
+                <input type="number" id="inPesquisaDano" placeholder="Digite o valor do dano">
 
-                <input type="number" id="inPesquisaDef" placeholder="Digite o valor da defesa">
                 <select id="inTipoFiltroDef">
-                    <option value="defMaior" selected>Defesa Maior ou igual que:</option>
-                    <option value="defMenor">Defesa menor ou igual que:</option>
+                    <option value="defigual" selected>Defesa igual a:</option>
+                    <option value="defMaior">Defesa Maior que:</option>
+                    <option value="defMenor">Defesa menor que:</option>
                 </select>
+                <input type="number" id="inPesquisaDef" placeholder="Digite o valor da Defesa">
 
-                <input type="number" id="inPesquisaSorte" placeholder="Digite o valor da sorte">
                 <select id="inTipoFiltroSorte">
-                    <option value="sorteMaior" selected>Sorte Maior ou igual que:</option>
-                    <option value="sorteMenor">Sorte menor ou igual que:</option>
+                    <option value="sorteigual" selected>Sorte igual a:</option>
+                    <option value="sorteMaior">Sorte Maior que:</option>
+                    <option value="sorteMenor">Sorte menor que:</option>
                 </select>
+                <input type="number" id="inPesquisaSorte" placeholder="Digite o valor da Sorte">
 
-                <input type="number" id="inPesquisaVelo" placeholder="Digite o valor da velocidade">
                 <select id="inTipoFiltroVelo">
-                    <option value="veloMaior" selected>Velocidade Maior ou igual que:</option>
-                    <option value="veloMenor">Velocidade menor ou igual que:</option>
+                    <option value="veloigual" selected>Velocidade igual a:</option>
+                    <option value="veloMaior">Velocidade Maior que:</option>
+                    <option value="veloMenor">Velocidade menor que:</option>
                 </select>
+                <input type="number" id="inPesquisaVelo" placeholder="Digite o valor da Velocidade">
+
+                
             </div>
             <button id="btnPesquisar" class="btn">Pesquisar</button>
             <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
