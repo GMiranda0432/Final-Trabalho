@@ -1,0 +1,68 @@
+@import url(root.css);
+.card-title{
+    font-size: 60px;
+    font-family: alagard;
+    text-align: center;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-body p {
+    font-size: 20px;
+    text-align: center;
+    font-family: ari-w9500-bold;
+}
+.status{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 10px;
+    margin: 15px 0px;
+}
+.status span{
+    background:var(--cor-principal);
+    padding:4px 10px;
+    border-radius:var(--borda);
+    font-size: 15px;
+}
+.biografia {
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    opacity:.85;
+}
+.descricao {
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    opacity:.85;
+}
+.btn-ver:hover {
+    background-color: rgb(21, 38, 136);
+    
+}
+.btn-editar:hover{
+    color: black;
+    background-color: rgb(238, 194, 50);
+}
+.btn-excluir:hover{
+    background-color: var(--cor-destaque);
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    border-style:outset;
+    border-width: 5px;
+    border-color: goldenrod;
+    transition: 
+    transform 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+    animation: brilho 1.4s ease-in-out infinite alternate;
+}

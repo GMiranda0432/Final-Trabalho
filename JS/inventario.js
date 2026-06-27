@@ -22,28 +22,44 @@ function renderizarLista() {
             let personaAtual = vetPersonas[i];
 
             listaPersonagens.innerHTML += `
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">${personaAtual.nome}</h5>
-                            <p class="card-text">Classe: ${personaAtual.classe}</p>
-                            <p class="card-text">Raça: ${personaAtual.raca}</p>
-                            <p class="card-text">Sexo: ${personaAtual.sexo}</p>
-                            <p class="card-text">Descrição: ${personaAtual.descricao}</p>
-                            <p class="card-text">Biografia: ${personaAtual.biografia}</p>
-                            <p class="card-text">Vida: ${personaAtual.vida}</p>
-                            <p class="card-text">Dano: ${personaAtual.dano}</p>
-                            <p class="card-text">Defesa: ${personaAtual.defesa}</p>
-                            <p class="card-text">Sorte: ${personaAtual.sorte}</p>
-                            <p class="card-text">Velocidade: ${personaAtual.velocidade}</p>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-warning btn-sm btn-editar" idPersona="${personaAtual.id}">Editar</button>
-                                <button class="btn btn-danger btn-sm btn-excluir" idPersona="${personaAtual.id}">Excluir</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+<div class="card">
+<div class="card-body">
+<h4 class="card-title">${personaAtual.nome}</h4>
+    <p class="classe">
+    🛡️ ${personaAtual.classe}
+    • 👤 ${personaAtual.raca}
+    • ${personaAtual.sexo}
+    </p>
+    <p class="descricao">
+        Descrição: ${personaAtual.descricao}
+    </p>
+    <p class="biografia">
+        Biografia: ${personaAtual.biografia}
+    </p>
+    <div class="status">
+        <span>❤️ ${personaAtual.vida}</span>
+        <span>⚔️ ${personaAtual.dano}</span>
+        <span>🛡️ ${personaAtual.defesa}</span>
+        <span>🍀 ${personaAtual.sorte}</span>
+        <span>⚡ ${personaAtual.velocidade}</span>
+    </div>
+    <div class="d-flex gap-1">
+        <button class="btn btn-primary btn-ver"
+            idPersona="${personaAtual.id}">
+            Ver ficha
+        </button>
+        <button class="btn btn-warning btn-editar"
+            idPersona="${personaAtual.id}">
+            Editar
+        </button>
+        <button class="btn btn-danger btn-excluir"
+            idPersona="${personaAtual.id}">
+            Excluir
+        </button>
+    </div>
+</div>
+</div>
+`;
         }
     } else {
         msgVazio.style.display = "block";
@@ -57,7 +73,7 @@ listaPersonagens.addEventListener("click", function (event) {
         const idDeletar = Number(event.target.getAttribute("idPersona"));
 
         if (confirm("Tem certeza que deseja apagar este personagem?")) {
-    somSucesso.play();
+            somSucesso.play();
             let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
             let novoVetPersonas = [];
 
@@ -118,30 +134,95 @@ btnPesquisar.addEventListener("click", function () {
             let personaAtual = novoVetPersonas[j];
 
             listaPersonagens.innerHTML += `
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">${personaAtual.nome}</h5>
-                            <p class="card-text">Classe: ${personaAtual.classe}</p>
-                            <p class="card-text">Raça: ${personaAtual.raca}</p>
-                            <p class="card-text">Sexo: ${personaAtual.sexo}</p>
-                            <p class="card-text">Descrição: ${personaAtual.descricao}</p>
-                            <p class="card-text">Biografia: ${personaAtual.biografia}</p>
-                            <p class="card-text">Vida: ${personaAtual.vida}</p>
-                            <p class="card-text">Dano: ${personaAtual.dano}</p>
-                            <p class="card-text">Defesa: ${personaAtual.defesa}</p>
-                            <p class="card-text">Sorte: ${personaAtual.sorte}</p>
-                            <p class="card-text">Velocidade: ${personaAtual.velocidade}</p>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-warning btn-sm btn-editar" idPersona="${personaAtual.id}">Editar</button>
-                                <button class="btn btn-danger btn-sm btn-excluir" idPersona="${personaAtual.id}">Excluir</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+<div class="card">
+<div class="card-body">
+<h4 class="card-title">${personaAtual.nome}</h4>
+    <p class="classe">
+    🛡️ ${personaAtual.classe}
+    • 👤 ${personaAtual.raca}
+    • ${personaAtual.sexo}
+    </p>
+    <p class="descricao">
+        Descrição: ${personaAtual.descricao}
+    </p>
+    <p class="biografia">
+        Biografia: ${personaAtual.biografia}
+    </p>
+    <div class="status">
+        <span>❤️ ${personaAtual.vida}</span>
+        <span>⚔️ ${personaAtual.dano}</span>
+        <span>🛡️ ${personaAtual.defesa}</span>
+        <span>🍀 ${personaAtual.sorte}</span>
+        <span>⚡ ${personaAtual.velocidade}</span>
+    </div>
+    <div class="d-flex gap-1">
+        <button class="btn btn-primary btn-ver" 
+            idPersona="${personaAtual.id}">
+            Ver ficha
+        </button>
+        <button class="btn btn-warning btn-editar"
+            idPersona="${personaAtual.id}">
+            Editar
+        </button>
+        <button class="btn btn-danger btn-excluir"
+            idPersona="${personaAtual.id}">
+            Excluir
+        </button>
+    </div>
+</div>
+</div>
+`;
         }
     } else {
         msgVazio.style.display = "block";
     }
+    
+});
+const popup=document.getElementById("popupFicha");
+    listaPersonagens.addEventListener("click",function(event){
+
+    if(event.target.classList.contains("btn-ver")){
+
+        const id=Number(event.target.getAttribute("idPersona"));
+
+        let vetPersonas=JSON.parse(localStorage.getItem("personagens")) || [];
+
+        const personagem=vetPersonas.find(p=>p.id===id);
+
+        document.getElementById("popupNome").textContent=
+            personagem.nome;
+
+        document.getElementById("popupInfo").textContent=
+            `${personagem.classe} • ${personagem.raca} • ${personagem.sexo}`;
+
+        document.getElementById("popupDescricao").textContent=
+            personagem.descricao;
+
+        document.getElementById("popupBiografia").textContent=
+            personagem.biografia;
+
+        document.getElementById("popupStatus").innerHTML=`
+
+            ❤️ Vida: ${personagem.vida}<br>
+
+            ⚔ Dano: ${personagem.dano}<br>
+
+            🛡 Defesa: ${personagem.defesa}<br>
+
+            🍀 Sorte: ${personagem.sorte}<br>
+
+            ⚡ Velocidade: ${personagem.velocidade}
+
+        `;
+
+        popup.classList.add("ativo");
+
+    }
+});
+document
+.getElementById("fecharPopup")
+.addEventListener("click",()=>{
+
+    popup.classList.remove("ativo");
+
 });

@@ -53,6 +53,28 @@ personaForm.addEventListener("submit", function (event) {
         "personagens",
         JSON.stringify(vetPersonas)
     );
-    alert("Personagem salvo com sucesso! o verifique no seu inventário");
-    personaForm.reset();
+   personaForm.reset();
+
+document
+    .getElementById("popupSucesso")
+    .classList.add("ativo");
+    const popup = document.getElementById("popupSucesso");
+
+document
+.getElementById("novoPersonagem")
+.addEventListener("click", ()=>{
+
+    popup.classList.remove("ativo");
+
+    inNomeP.focus();
+
+});
+
+document
+.getElementById("abrirInventario")
+.addEventListener("click", ()=>{
+
+    location.href="../perfil/inventario.html";
+
+});
 });

@@ -1,3 +1,7 @@
+@import url(style.css);
+@import url(navbar.css);
+@import url(popup.css);
+@import url(card.css);
 :root {
     --cor-principal: #f8f8f8;
     --cor-secundaria: #3c0c69be;
@@ -5,9 +9,41 @@
     --cor-destaque: #a20919;
     --cor-destaque-transp: #7838888c;
     --cor-fundo: #1f246c;
-    --cor-texto: #3c0c69;
+    --cor-texto: #500e8d; 
+    --cor-negrito: #3c0c69;
     --borda: 5px;
     --agina: #ffffff;
     --blur: 5px;
+}
+
+
+@font-face {
+  font-family: "ari-w9500";
+  src: url(../recursos/fontes/ari-w9500-condensed-display.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kiwisoda";
+  src: url(../recursos/fontes/KiwiSoda.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "alagard";
+  src: url(../recursos/fontes/alagard.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: "ari-w9500-bold";
+    src: url(../recursos/fontes/ari-w9500-bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+    font-family: "emojis";
+    src: url(../recursos/fontes/EmojiFont.ttf);
 }
 
