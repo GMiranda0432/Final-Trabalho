@@ -13,22 +13,28 @@ const inDefP = document.getElementById("inDefP");
 const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
+somSucesso = document.getElementById("somSucesso");
+somFalha = document.getElementById("somFalha");
+
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) ||[];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
    if (inNomeP.value.trim() == "") {
+    somFalha.play();
         alert("O nome do personagem da sua ficha não pode ser invisível");
         inNomeP.focus();
         return;
     }
     if (inDescP.value.trim() == "") {
+    somFalha.play();
         alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência");
         inDescP.focus();
         return;
     }
     if (inBioP.value.trim() == "") {
+    somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
         return;
@@ -53,6 +59,7 @@ personaForm.addEventListener("submit", function (event) {
         "personagens",
         JSON.stringify(vetPersonas)
     );
+    somSucesso.play();
    personaForm.reset();
 
 document
