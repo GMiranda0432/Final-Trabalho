@@ -1,16 +1,15 @@
 const inPesquisaClasse = document.getElementById("inPesquisaClasse");
 const inPesquisaRaca = document.getElementById("inPesquisaRaca");
 const inPesquisaSexo = document.getElementById("inPesquisaSexo");
-
 const inPesquisaVida = document.getElementById("inPesquisaVida");
 const inPesquisaDano = document.getElementById("inPesquisaDano");
-const inPesquisaDefesa = document.getElementById("inPesquisaDefesa");
+const inPesquisaDef = document.getElementById("inPesquisaDef");
 const inPesquisaSorte = document.getElementById("inPesquisaSorte");
 const inPesquisaVelo = document.getElementById("inPesquisaVelo");
 
 const inTipoFiltroVida = document.getElementById("inTipoFiltroVida")
 const inTipoFiltroDano = document.getElementById("inTipoFiltroDano")
-const inTipoFiltroDefesa = document.getElementById("inTipoFiltroDefesa")
+const inTipoFiltroDef = document.getElementById("inTipoFiltroDef")
 const inTipoFiltroSorte = document.getElementById("inTipoFiltroSorte")
 const inTipoFiltroVelo = document.getElementById("inTipoFiltroVelo")
 
@@ -23,6 +22,8 @@ const listaAreas = document.getElementById("listaAreas");
 const btnPesquisar = document.getElementById("btnPesquisar");
 const somSucesso = document.getElementById("somSucesso");
 const somFalha = document.getElementById("somFalha");
+
+let idEditando = null;
 
 function renderizarLista() {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
@@ -60,10 +61,6 @@ function renderizarLista() {
         <button class="btn btn-primary btn-ver"
             idPersona="${personaAtual.id}">
             Ver ficha
-        </button>
-        <button class="btn btn-warning btn-editar"
-            idPersona="${personaAtual.id}">
-            Editar
         </button>
         <button class="btn btn-danger btn-excluir"
             idPersona="${personaAtual.id}">
@@ -111,7 +108,7 @@ btnPesquisar.addEventListener("click", function () {
     const pesquisaDef = inPesquisaDef.value;
     const pesquisaSorte = inPesquisaSorte.value;
     const pesquisaVelo = inPesquisaVelo.value;
-    
+
     const tipoVida = inTipoFiltroVida.value;
     const tipoDano = inTipoFiltroDano.value;
     const tipoDef = inTipoFiltroDef.value;
@@ -248,10 +245,6 @@ btnPesquisar.addEventListener("click", function () {
             idPersona="${personaAtual.id}">
             Ver ficha
         </button>
-        <button class="btn btn-warning btn-editar"
-            idPersona="${personaAtual.id}">
-            Editar
-        </button>
         <button class="btn btn-danger btn-excluir"
             idPersona="${personaAtual.id}">
             Excluir
@@ -260,11 +253,70 @@ btnPesquisar.addEventListener("click", function () {
 </div>
 </div>
 `;
-            somSucesso.play();
-        }
+        } somSucesso.play();
     } else {
         msgVazio.style.display = "block";
         somFalha.play();
     }
 
+});
+
+const popup = document.getElementById("popupFicha");
+listaPersonagens.addEventListener("click", function (event) {
+    if (event.target.classList.contains("btn-ver")) {
+
+        const idEditar = Number(event.target.getAttribute("idPersona"));
+
+        let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+        let novoVetPersonas = [];
+
+        for (var i = 0; i < vetPersonas.length; i++) {
+            if (vetPersonas[i].id == idEditar) {
+                novoVetPersonas[novoVetPersonas.length] = vetPersonas[i]
+            }
+        }
+        idEditando = idEditar
+        let personaEditando = novoVetPersonas[0]
+        document.getElementById("popupNome").value = personaEditando.nome;
+        document.getElementById("popupClasse").value = personaEditando.classe;
+        document.getElementById("popupRaca").value = personaEditando.raca;
+        document.getElementById("popupSexo").value = personaEditando.sexo;
+        document.getElementById("popupDesc").value = personaEditando.descricao;
+        document.getElementById("popupBio").value = personaEditando.biografia;
+        document.getElementById("popupVida").value = personaEditando.vida;
+        document.getElementById("popupDano").value = personaEditando.dano;
+        document.getElementById("popupDef").value = personaEditando.defesa;
+        document.getElementById("popupSorte").value = personaEditando.sorte;
+        document.getElementById("popupVelo").value = personaEditando.velocidade;
+
+        popup.classList.add("ativo");
+    }
+});
+document.getElementById("fecharPopup").addEventListener("click", () => {
+    popup.classList.remove("ativo");
+});
+document.getElementById("btnSalvarEdicao").addEventListener("click", function () {
+    let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+
+    for (var i = 0; i < vetPersonas.length; i++) {
+        if (vetPersonas[i].id == idEditando) {
+            
+            vetPersonas[i].nome = document.getElementById("popupNome").value;
+            vetPersonas[i].classe = document.getElementById("popupClasse").value;
+            vetPersonas[i].raca = document.getElementById("popupRaca").value;
+            vetPersonas[i].sexo = document.getElementById("popupSexo").value;
+            vetPersonas[i].descricao = document.getElementById("popupDesc").value;
+            vetPersonas[i].biografia = document.getElementById("popupBio").value;
+            vetPersonas[i].vida = Number(document.getElementById("popupVida").value);
+            vetPersonas[i].dano = Number(document.getElementById("popupDano").value);
+            vetPersonas[i].defesa = Number(document.getElementById("popupDef").value);
+            vetPersonas[i].sorte = Number(document.getElementById("popupSorte").value);
+            vetPersonas[i].velocidade = Number(document.getElementById("popupVelo").value);
+        }
+    }
+
+    localStorage.setItem("personagens", JSON.stringify(vetPersonas));
+    renderizarLista();
+    popup.classList.remove("ativo");
+    somSucesso.play();
 });

@@ -16,25 +16,25 @@ const inVeloP = document.getElementById("inVeloP");
 somSucesso = document.getElementById("somSucesso");
 somFalha = document.getElementById("somFalha");
 
-let vetPersonas = JSON.parse(localStorage.getItem("personagens")) ||[];
+let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-   if (inNomeP.value.trim() == "") {
-    somFalha.play();
+    if (inNomeP.value.trim() == "") {
+        somFalha.play();
         alert("O nome do personagem da sua ficha não pode ser invisível");
         inNomeP.focus();
         return;
     }
     if (inDescP.value.trim() == "") {
-    somFalha.play();
+        somFalha.play();
         alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência");
         inDescP.focus();
         return;
     }
     if (inBioP.value.trim() == "") {
-    somFalha.play();
+        somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
         return;
@@ -60,28 +60,22 @@ personaForm.addEventListener("submit", function (event) {
         JSON.stringify(vetPersonas)
     );
     somSucesso.play();
-   personaForm.reset();
+    personaForm.reset();
 
-document
-    .getElementById("popupSucesso")
-    .classList.add("ativo");
+    document.getElementById("popupSucesso").classList.add("ativo");
     const popup = document.getElementById("popupSucesso");
 
-document
-.getElementById("novoPersonagem")
-.addEventListener("click", ()=>{
+    document.getElementById("novoPersonagem").addEventListener("click", () => {
 
-    popup.classList.remove("ativo");
+        popup.classList.remove("ativo");
 
-    inNomeP.focus();
+        inNomeP.focus();
 
-});
+    });
 
-document
-.getElementById("abrirInventario")
-.addEventListener("click", ()=>{
+    document.getElementById("abrirInventario").addEventListener("click", () => {
 
-    location.href="../perfil/inventario.html";
+        location.href = "../perfil/inventario.html";
 
-});
+    });
 });
