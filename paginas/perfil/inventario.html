@@ -172,9 +172,11 @@
         <div class="popup-card">
 
             <button id="fecharPopup" class="fechar">X</button>
-
-            <input type="text" id="popupNome">
-
+            <h2>Tela de edição</h2>
+            <h4>Digite os novos dados</h4>
+            <hr>
+            <input type="text" id="popupNome" placeholder="Novo Nome">
+            <p>Nome</p>
             <select id="popupClasse">
                 <option value="guardiao">Guardião</option>
                 <option value="guerreiro">Guerreiro</option>
@@ -209,6 +211,7 @@
                 <option value="pirata">Pirata</option>
                 <option value="bucaneiro">Bucaneiro</option>
             </select>
+            <p>Classe</p>
             <select id="popupRaca">
                 <option value="humano">Humano</option>
                 <option value="elfo">Elfo</option>
@@ -242,22 +245,31 @@
                 <option value="entidade">Entidade</option>
                 <option value="desconhecido">Desconhecido</option>
             </select>
+            <p>Raça</p>
             <select id="popupSexo">
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="intersex">Intersex</option>
                 <option value="desconhecido">Desconhecido</option>
             </select>
-
-            <textarea id="popupDesc"></textarea>
-            <textarea id="popupBio"></textarea>
-
-            <input type="number" id="popupVida">
-            <input type="number" id="popupDano">
-            <input type="number" id="popupDef">
-            <input type="number" id="popupSorte">
-            <input type="number" id="popupVelo">
-
+            <p>Sexo</p>
+            <hr>
+            <textarea id="popupDesc" placeholder="Nova descrição" rows="4"></textarea>
+            <p>Descrição</p>
+            <textarea id="popupBio" placeholder="Nova Biografia" rows="4"></textarea>
+            <p>Biografia</p>
+            <hr>
+            <input type="number" id="popupVida" placeholder="Nova vida">
+            <p>Vida</p>
+            <input type="number" id="popupDano" placeholder="Novo Dano">
+            <p>Dano</p>
+            <input type="number" id="popupDef" placeholder="Nova defesa">
+            <p>Defesa</p>
+            <input type="number" id="popupSorte" placeholder="Nova sorte">
+            <p>Sorte</p>
+            <input type="number" id="popupVelo" placeholder="Nova Velocidade">
+            <p>Velocidade</p>
+<hr>
             <button id="btnSalvarEdicao" class="btn">Salvar</button>
         </div>
 

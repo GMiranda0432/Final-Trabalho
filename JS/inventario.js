@@ -297,10 +297,96 @@ document.getElementById("fecharPopup").addEventListener("click", () => {
 });
 document.getElementById("btnSalvarEdicao").addEventListener("click", function () {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+    const popupNome = document.getElementById("popupNome");
+    const popupDesc = document.getElementById("popupDesc");
+    const popupBio = document.getElementById("popupBio");
+    const popupVida = document.getElementById("popupVida");
+    const popupDano = document.getElementById("popupDano");
+    const popupDef = document.getElementById("popupDef");
+    const popupSorte = document.getElementById("popupSorte");
+    const popupVelo = document.getElementById("popupVelo");
 
+    if (popupNome.value.trim() == "") {
+        somFalha.play();
+        alert("Tudo que existe é nomeado, assim como seu personagem, por favor, não deixe nome em branco ao editar");
+        popupNome.focus();
+        return;
+    }
+    if (popupDesc.value.trim() == "") {
+        somFalha.play();
+        alert("Tudo pode ter uma leve forma de reconhecimento, por favor, não deixe descrição em branco ao editar");
+        popupDesc.focus();
+        return;
+    }
+    if (popupBio.value.trim() == "") {
+        somFalha.play();
+        alert("Apagar a história de um personagem é diferente de o deletar, por favor, não deixe biografia em branco ao editar");
+        popupBio.focus();
+        return;
+    }
+    if (Number(popupVida.value) < 1) {
+        somFalha.play();
+        alert("Até espíritos e fantasmas tem 1 de vida, por favor, dê um valor maior que 0")
+        popupVida.focus();
+        return;
+    }
+    if (Number(popupVida.value) > 1000) {
+        somFalha.play();
+        alert("Nossos chefes nem chegam a essa quantidade de vitalidade, por favor, dê um valor menor que 1.000")
+        popupVida.focus();
+        return;
+    }
+    if (Number(popupDano.value) < 1) {
+        somFalha.play();
+        alert("Um pedaço de flor causa mais dano que você, por favor, dê um valor maior que 0")
+        popupDano.focus();
+        return;
+    }
+    if (Number(popupDano.value) > 1000) {
+        somFalha.play();
+        alert("Você quer partir o universo com um tapa?, por favor, dê um valor menor que 1.000")
+        popupDano.focus();
+        return;
+    }
+    if (Number(popupDef.value) < 1) {
+        somFalha.play();
+        alert("Defesa zero ou negativa? não importa, por favor, dê um valor maior que 0")
+        popupDef.focus();
+        return;
+    }
+    if (Number(popupDef.value) > 1000) {
+        somFalha.play();
+        alert("Seria necessário uma ogiva nuclear para te machucar, por favor, dê um valor menor que 1.000")
+        popupDef.focus();
+        return;
+    }
+    if (Number(popupSorte.value) < 1) {
+        somFalha.play();
+        alert("No cara e coroa, moedas caem em pé com você, por favor, dê um valor maior que 0")
+        popupSorte.focus();
+        return;
+    }
+    if (Number(popupSorte.value) > 1000) {
+        somFalha.play();
+        alert("Entre o backend e o frontend, sem meta-game na criação de ficha, por favor, dê um valor menor que 1.000")
+        popupSorte.focus();
+        return;
+    }
+    if (Number(popupVelo.value) < 1) {
+        somFalha.play();
+        alert("Você é lento demais!, por favor, dê um valor maior que 0")
+        popupVelo.focus();
+        return;
+    }
+    if (Number(popupVelo.value) > 1000) {
+        somFalha.play();
+        alert("Funcionou! seu personagem ficou com a velocidade tão alta que voltou no tempo antes da edição ser salva, por favor, dê um valor menor que 1.000")
+        popupVelo.focus();
+        return;
+    }
     for (var i = 0; i < vetPersonas.length; i++) {
         if (vetPersonas[i].id == idEditando) {
-            
+
             vetPersonas[i].nome = document.getElementById("popupNome").value;
             vetPersonas[i].classe = document.getElementById("popupClasse").value;
             vetPersonas[i].raca = document.getElementById("popupRaca").value;
