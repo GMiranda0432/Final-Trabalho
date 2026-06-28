@@ -55,10 +55,7 @@ personaForm.addEventListener("submit", function (event) {
 
     };
     vetPersonas[vetPersonas.length] = persona;
-    localStorage.setItem(
-        "personagens",
-        JSON.stringify(vetPersonas)
-    );
+    localStorage.setItem("personagens", JSON.stringify(vetPersonas));
     somSucesso.play();
     personaForm.reset();
 
