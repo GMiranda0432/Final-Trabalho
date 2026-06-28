@@ -9,11 +9,11 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="../../CSS/root.css">
     <link rel="icon" type="image/x-icon" href="../../recursos/imgs/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
@@ -25,22 +25,14 @@
                     <img src="../../recursos/imgs/favicon.png" alt="icone rpagina">
                 </a>
                 <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
-
             </div>
-
             <nav>
                 <ul class="nav-list">
                     <li id="nav-item">
-                        <a href="../../index.html">Início</a>
+                        <a href="criar.html">Criar</a>
                     </li>
                     <li id="nav-item">
                         <a href="../perfil/inventario.html">Inventário</a>
-                    </li>
-                    <li id="nav-item">
-                        <a href="../simulador/criarSimulacao.html">Simulação</a>
-                    </li>
-                    <li id="nav-item">
-                        <a href="../perfil/perfil.html">Perfil</a>
                     </li>
                     <li id="nav-item">
                         <a href="../perfil/config.html">Configurações</a>
@@ -52,23 +44,186 @@
 
     <main class="container py-4">
         <div id="conteudo">
+            <h1 class="h4 text-center mb-4">Criar Personagem</h1>
 
-            <h1 class="text-center mb-4">Crie seu elemento</h1>
-            <section class="text-center">
-                <p class="mb-3">O que deseja criar?</p>
-                <div class="criacoes d-flex gap-3 justify-content-center flex-wrap">
-                    <a href="criarPersonagem.html" class="btn btn-lg">
-                        <div id="criarPersonagem"><img src="../../recursos/imgs/personagem.gif" alt=""> <h1>Personagem</h1></div>
-                    </a>
-                    <a href="criarObjeto.html" class="btn btn-lg">
-                        <div id="criarItem"><img src="../../recursos/imgs/itens.gif" alt=""> <h1>Item</h1></div>
-                    </a>
+            <form id="personaForm">
+                <div class="mb-3">
+                    <label for="inNomeP" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="inNomeP" name="nomeP" required
+                        placeholder="Digite o nome do personagem">
                 </div>
-            </section>
+                <div class="mb-3">
+                    <label for="inClasseP" class="form-label">Classe</label>
+                    <select id="inClasseP" name="classeP" class="form-select" required>
+                        <option value="" disabled hidden selected>-- Selecione uma Classe --</option>
+                        <option value="guardiao">Guardião</option>
+                        <option value="guerreiro">Guerreiro</option>
+                        <option value="berserker">Berserker</option>
+                        <option value="ladino">Ladino</option>
+                        <option value="arqueiro">Arqueiro</option>
+                        <option value="mago">Mago</option>
+                        <option value="feiticeiro">Feiticeiro</option>
+                        <option value="druida">Druida</option>
+                        <option value="clerigo">Clérigo</option>
+                        <option value="bardo">Bardo</option>
+                        <option value="bruxo">Bruxo</option>
+                        <option value="invocador">Invocador</option>
+                        <option value="monge">Monge</option>
+                        <option value="paladino">Paladino</option>
+                        <option value="cacador">Caçador</option>
+                        <option value="engenheiro">Engenheiro</option>
+                        <option value="ilusionista">Ilusionista</option>
+                        <option value="necromante">Necromante</option>
+                        <option value="comandante">Comandante</option>
+                        <option value="detetive">Detetive</option>
+                        <option value="ninja">Ninja</option>
+                        <option value="cavaleiro">Cavaleiro</option>
+                        <option value="xama">Xamã</option>
+                        <option value="menestrel">Menestrel</option>
+                        <option value="exterminador">Exterminador</option>
+                        <option value="alquimista">Alquimista</option>
+                        <option value="curandeiro">Curandeiro</option>
+                        <option value="assassino">Assassino</option>
+                        <option value="artesao">Artesão</option>
+                        <option value="explorador">Explorador</option>
+                        <option value="pirata">Pirata</option>
+                        <option value="bucaneiro">Bucaneiro</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inRacaP" class="form-label">Raça</label>
+                    <select id="inRacaP" name="racaP" class="form-select" required placeholder="Selecione uma raça">
+                        <option value="" disabled hidden selected>-- Selecione uma Raça --</option>
+
+                        <option value="humano">Humano</option>
+                        <option value="elfo">Elfo</option>
+                        <option value="anao">Anão</option>
+                        <option value="orc">Orc</option>
+                        <option value="fada">Fada</option>
+                        <option value="astral">Astral</option>
+                        <option value="metamorfo">Metamorfo</option>
+                        <option value="cristalino">Cristalino</option>
+                        <option value="sereiano">Sereiano</option>
+                        <option value="vampiro">Vampiro</option>
+                        <option value="demonio">Demônio</option>
+                        <option value="anjo">Anjo</option>
+                        <option value="automato">Autômato</option>
+                        <option value="espirito">Espirito</option>
+                        <option value="draconato">Draconato</option>
+                        <option value="lobisomem">Lobisomem</option>
+                        <option value="ogro">Ogro</option>
+                        <option value="troll">Troll</option>
+                        <option value="goblin">Goblin</option>
+                        <option value="minotauro">Minotauro</option>
+                        <option value="centauro">Centauro</option>
+                        <option value="grifo">Grifo</option>
+                        <option value="hippogrifo">Hippogrifo</option>
+                        <option value="ninfa">Ninfa</option>
+                        <option value="gnomo">Gnomo</option>
+                        <option value="elemental">Elemental</option>
+                        <option value="driade">Dríade</option>
+                        <option value="neko">Neko</option>
+                        <option value="slime">Slime</option>
+                        <option value="entidade">Entidade</option>
+                        <option value="desconhecido">Desconhecido</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inSexoP" class="form-label">Sexo</label>
+                    <select id="inSexoP" name="sexoP" class="form-select" required
+                        placeholder="Selecione uma opção de sexo">
+                        <option value="" disabled hidden selected>-- Selecione uma opção de sexo--</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="intersex">Intersex</option>
+                        <option value="desconhecido">Desconhecido</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inDescP" class="form-label">Descrição - Relacionado a jogabilidade do personagem, as
+                        habilidades, aparência, personalidade-</label>
+                    <textarea id="inDescP" name="descP" class="form-control" rows="4" required
+                        placeholder="Digite uma descrição do personagem"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inBioP" class="form-label">Biografia - Relacionado a lore do personagem, os sonhos,
+                        relações, passado-</label>
+                    <textarea id="inBioP" name="bioP" class="form-control" rows="4" required
+                        placeholder="Digite a biografia do personagem"> </textarea>
+                </div>
+                <p class="h3 mt-4">
+                    Estatísticas do personagem, dê a todos os atributos abaixo pontos entre 1 a 1.000
+                </p>
+                <div class="row g-3 mb-3">
+                    <div class="col-6 col-md-2">
+                        <label for="inVidaP" class="form-label">Vida</label>
+                        <input type="number" id="inVidaP" name="vidaP" required min="1" max="1000" class="form-control"
+                            placeholder="1-1.000">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="inDanoP" class="form-label">Dano</label>
+                        <input type="number" id="inDanoP" name="danoP" required min="1" max="1000" class="form-control"
+                            placeholder="1-1.000">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="inDefP" class="form-label">Defesa</label>
+                        <input type="number" id="inDefP" name="defP" required min="1" max="1000" class="form-control"
+                            placeholder="1-1.000">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="inSorteP" class="form-label">Sorte</label>
+                        <input type="number" id="inSorteP" name="sorteP" required min="1" max="1000" class="form-control"
+                            placeholder="1-1.000">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="inVeloP" class="form-label">Velocidade</label>
+                        <input type="number" id="inVeloP" name="veloP" required min="1" max="1000" class="form-control"
+                            placeholder="1-1.000">
+                    </div>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success btn-lg">Salvar personagem</button>
+                    <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
+                    <audio id="somFalha" src="../../recursos/sons/somFalha.mp3"></audio>
+                </div>
+            </form>
         </div>
+
     </main>
+    <div id="popupSucesso" class="popup">
+
+        <div class="popup-card">
+
+            <h3> <span class="emoji">M</span>Registrado nos Arquivos da Guilda!<span class="emoji">N</span></h3>
+
+            <p>
+                Seu personagem foi adicionado ao inventário.
+            </p>
+
+            <div class="popup-botoes">
+
+                <button id="abrirInventario" class="btn btn-lg">
+                    <span class="emoji">G</span> <br> Abrir Inventário
+                </button>
+
+                <button id="novoPersonagem" class="btn btn-lg">
+                    <span class="emoji">G</span> <br> Criar Outro
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="../../JS/script.js"></script>
+    <script src="../../JS/criar.js"></script>
+
 </body>
 
 </html>

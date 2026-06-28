@@ -2,20 +2,92 @@
 @import url(navbar.css);
 @import url(popup.css);
 @import url(card.css);
+
 :root {
-    --cor-principal: #f8f8f8;
-    --cor-secundaria: #3c0c69be;
-    --transp-primaria: #9bd2e7b4;
-    --cor-destaque: #a20919;
-    --cor-destaque-transp: #7838888c;
-    --cor-fundo: #1f246c;
-    --cor-texto: #500e8d; 
-    --cor-negrito: #3c0c69;
-    --borda: 5px;
-    --agina: #ffffff;
-    --blur: 5px;
+  --fundo-imagem: url(../recursos/imgs/fundo_noite.png);
+  --icone: url(../recursos/imgs/icon_noite.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #3c0c69be;
+  --transp-primaria: #9bd2e7b4;
+  --cor-destaque: #a20919;
+  --cor-destaque-transp: #7838888c;
+  --cor-fundo: #1f246c;
+  --cor-texto: #500e8d;
+  --cor-negrito: #3c0c69;
+  --borda: 5px;
+  --agina: #ffffff;
+  --blur: 5px;
 }
 
+[data-theme="noite"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_noite.png);
+  --icone: url(../recursos/imgs/icon_noite.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #3c0c69be;
+  --transp-primaria: #9bd2e7b4;
+  --cor-destaque: #a20919;
+  --cor-destaque-transp: #7838888c;
+  --cor-fundo: #1f246c;
+  --cor-texto: #500e8d;
+  --cor-negrito: #3c0c69;
+  --agina: #ffffff;
+}
+
+[data-theme="dia"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_dia.png);
+  --icone: url(../recursos/imgs/icon_dia.png);
+  --cor-principal: #ffffff;
+  --cor-secundaria: #3a7bd5be;
+  --transp-primaria: #bfe3ffb4;
+  --cor-destaque: #e65c00;
+  --cor-destaque-transp: #ff944d8c;
+  --cor-fundo: #4a90e2;
+  --cor-texto: #1a365d;
+  --cor-negrito: #0f2b46;
+  --agina: #ffffff;
+}
+
+[data-theme="manha"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_manha.png);
+  --icone: url(../recursos/imgs/icon_manha.png);
+  --cor-principal: #fff9f2;
+  --cor-secundaria: #8a4f78be;
+  --transp-primaria: #ebd2e0b4;
+  --cor-destaque: #d4a373;
+  --cor-destaque-transp: #e9c46a8c;
+  --cor-fundo: #6c5a7b;
+  --cor-texto: #4a2840;
+  --cor-negrito: #321625;
+  --agina: #ffffff;
+}
+
+[data-theme="tarde"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_tarde.png);
+  --icone: url(../recursos/imgs/icon_tarde.png);
+  --cor-principal: #fdf6ec;
+  --cor-secundaria: #4b5d67be;
+  --transp-primaria: #e2ccd2b4;
+  --cor-destaque: #db7b7b;
+  --cor-destaque-transp: #f0a5a58c;
+  --cor-fundo: #3f4e56;
+  --cor-texto: #2c3539;
+  --cor-negrito: #1c2224;
+  --agina: #ffffff;
+}
+
+[data-theme="crepusculo"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_crepusculo.png);
+  --icone: url(../recursos/imgs/icon_crepusculo.png);
+  --cor-principal: #faedf0;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --agina: #ffffff;
+}
 
 @font-face {
   font-family: "ari-w9500";
@@ -23,27 +95,30 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "kiwisoda";
   src: url(../recursos/fontes/KiwiSoda.ttf);
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "alagard";
   src: url(../recursos/fontes/alagard.ttf) format(truetype);
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-    font-family: "ari-w9500-bold";
-    src: url(../recursos/fontes/ari-w9500-bold.ttf);
+  font-family: "ari-w9500-bold";
+  src: url(../recursos/fontes/ari-w9500-bold.ttf);
   font-weight: normal;
   font-style: normal;
 
 }
-@font-face {
-    font-family: "emojis";
-    src: url(../recursos/fontes/EmojiFont.ttf);
-}
 
+@font-face {
+  font-family: "emojis";
+  src: url(../recursos/fontes/EmojiFont.ttf);
+}

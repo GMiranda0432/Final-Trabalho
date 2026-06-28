@@ -13,22 +13,28 @@ const inDefP = document.getElementById("inDefP");
 const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
-let vetPersonas = JSON.parse(localStorage.getItem("personagens")) ||[];
+somSucesso = document.getElementById("somSucesso");
+somFalha = document.getElementById("somFalha");
+
+let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
 
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-   if (inNomeP.value.trim() == "") {
+    if (inNomeP.value.trim() == "") {
+        somFalha.play();
         alert("O nome do personagem da sua ficha não pode ser invisível");
         inNomeP.focus();
         return;
     }
     if (inDescP.value.trim() == "") {
+        somFalha.play();
         alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência");
         inDescP.focus();
         return;
     }
     if (inBioP.value.trim() == "") {
+        somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
         return;
@@ -49,32 +55,24 @@ personaForm.addEventListener("submit", function (event) {
 
     };
     vetPersonas[vetPersonas.length] = persona;
-    localStorage.setItem(
-        "personagens",
-        JSON.stringify(vetPersonas)
-    );
-   personaForm.reset();
+    localStorage.setItem("personagens", JSON.stringify(vetPersonas));
+    somSucesso.play();
+    personaForm.reset();
 
-document
-    .getElementById("popupSucesso")
-    .classList.add("ativo");
+    document.getElementById("popupSucesso").classList.add("ativo");
     const popup = document.getElementById("popupSucesso");
 
-document
-.getElementById("novoPersonagem")
-.addEventListener("click", ()=>{
+    document.getElementById("novoPersonagem").addEventListener("click", () => {
 
-    popup.classList.remove("ativo");
+        popup.classList.remove("ativo");
 
-    inNomeP.focus();
+        inNomeP.focus();
 
-});
+    });
 
-document
-.getElementById("abrirInventario")
-.addEventListener("click", ()=>{
+    document.getElementById("abrirInventario").addEventListener("click", () => {
 
-    location.href="../perfil/inventario.html";
+        location.href = "../perfil/inventario.html";
 
-});
+    });
 });

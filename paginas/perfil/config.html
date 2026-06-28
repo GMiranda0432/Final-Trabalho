@@ -14,65 +14,53 @@
     <link rel="icon" type="image/x-icon" href="../../recursos/imgs/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>
+    <header>
         <div class="navbar">
             <div id="logos">
                 <a href="../../index.html">
-                <img src="../../recursos/imgs/favicon.png" alt="icone rpagina">
-                <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
+                    <img src="../../recursos/imgs/favicon.png" alt="icone rpagina">
                 </a>
+                <h1 id="logo"><strong>RP</strong>á<strong>G</strong>ina!</h1>
             </div>
             <nav>
                 <ul class="nav-list">
-                    
-                    <li id="nav-item">
-                        <a href="../../index.html">Início</a>
-                    </li>
                     <li id="nav-item">
                         <a href="../criar/criar.html">Criar</a>
                     </li>
                     <li id="nav-item">
-                        <a href="inventario.html">Inventário</a>
+                        <a href="../perfil/inventario.html">Inventário</a>
                     </li>
                     <li id="nav-item">
-                        <a href="../simulador/criarSimulacao.html">Simulação</a>
-                    </li>
-                    <li id="nav-item">
-                        <a href="perfil.html">Perfil</a>
+                        <a href="config.html">Configurações</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="mb-3">
-        <h2 class="h6">Tema do site</h2>
-        <form>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="theme" id="temaDia" value="temaDia" checked>
-                <label class="form-check-label" for="temaDia">Dia</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="theme" id="temaNoite" value="temaNoite">
-                <label class="form-check-label" for="temaNoite">Noite</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="theme" id="temaManha" value="temaManha">
-                <label class="form-check-label" for="temaManha">Manha</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="theme" id="temaTarde" value="temaTarde">
-                <label class="form-check-label" for="temaTarde">Tarde</label>
-            </div>
-        </form>
-    </section>
+    <main class="container py-4">
+        <div id="conteudo">
+            <form id="configForm">
+              <label for="inTema" class="form-label">Tema do site</label>
+                    <select id="inTema" name="classeP" class="form-select" required>
+                        <option value="" disabled hidden selected>-- Selecione um tema --</option>
+                        <option value="dia">Dia</option>
+                        <option value="noite">Noite</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="manha">Manhã</option>
+                        <option value="crepusculo">Crepúsculo</option>
+                        </select>
+                    <button type="submit" class="btn btn-success btn-lg">Salvar Configurações</button>
+                        </form>
+        </div>
+                    <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
+    <script src="../../JS/script.js"></script>
 </body>
 
 </html>
