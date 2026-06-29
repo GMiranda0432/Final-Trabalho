@@ -9,7 +9,6 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../CSS/style.css">
     <link rel="stylesheet" href="../../CSS/root.css">
     <link rel="icon" type="image/x-icon" href="../../recursos/imgs/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,7 +132,7 @@
                 </div>
                 <div class="d-flex">
                 <select id="inTipoFiltroDano">
-                    <option value="danoigual" selected>Dano igual a:</option>
+                    <option value="danoIgual" selected>Dano igual a:</option>
                     <option value="danoMaior">Dano Maior que:</option>
                     <option value="danoMenor">Dano menor que:</option>
                 </select>
@@ -141,7 +140,7 @@
                 </div>
                 <div class="d-flex">
                 <select id="inTipoFiltroDef">
-                    <option value="defigual" selected>Defesa igual a:</option>
+                    <option value="defIgual" selected>Defesa igual a:</option>
                     <option value="defMaior">Defesa Maior que:</option>
                     <option value="defMenor">Defesa menor que:</option>
                 </select>
@@ -149,7 +148,7 @@
                 </div>
                 <div class="d-flex">
                 <select id="inTipoFiltroSorte">
-                    <option value="sorteigual" selected>Sorte igual a:</option>
+                    <option value="sorteIgual" selected>Sorte igual a:</option>
                     <option value="sorteMaior">Sorte Maior que:</option>
                     <option value="sorteMenor">Sorte menor que:</option>
                 </select>
@@ -157,11 +156,19 @@
                 </div>
                 <div class="d-flex">
                 <select id="inTipoFiltroVelo">
-                    <option value="veloigual" selected>Velocidade igual a:</option>
+                    <option value="veloIgual" selected>Velocidade igual a:</option>
                     <option value="veloMaior">Velocidade Maior que:</option>
                     <option value="veloMenor">Velocidade menor que:</option>
                 </select>
                 <input type="number" id="inPesquisaVelo" placeholder="Digite o valor da Velocidade">
+                </div>
+                <div class="d-flex">
+                <select id="inTipoFiltroMana">
+                    <option value="manaIgual" selected>Mana igual a:</option>
+                    <option value="manaMaior">Mana Maior que:</option>
+                    <option value="manaMenor">Mana menor que:</option>
+                </select>
+                <input type="number" id="inPesquisaMana" placeholder="Digite o valor da Mana">
                 </div>
                 
             </div>
@@ -183,7 +190,7 @@
         <div class="popup-card">
 
             <button id="fecharPopup" class="fechar">X</button>
-            <h2>Tela de edição</h2>
+            <h2>Editor de personagem</h2>
             <h4>Digite os novos dados</h4>
             <hr>
             <input type="text" id="popupNome" placeholder="Novo Nome">
@@ -280,6 +287,8 @@
             <p>Sorte</p>
             <input type="number" id="popupVelo" placeholder="Nova Velocidade">
             <p>Velocidade</p>
+            <input type="number" id="popupMana" placeholder="Nova Mana">
+            <p>Mana</p>
 <hr>
             <button id="btnSalvarEdicao" class="btn">Salvar</button>
         </div>

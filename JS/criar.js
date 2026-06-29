@@ -12,6 +12,7 @@ const inDanoP = document.getElementById("inDanoP");
 const inDefP = document.getElementById("inDefP");
 const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
+const inManaP = document.getElementById("inManaP");
 
 const somFalha = document.getElementById("somFalha");
 
@@ -24,21 +25,15 @@ personaForm.addEventListener("submit", function (event) {
         somFalha.play();
         alert("O nome do personagem da sua ficha não pode ser invisível");
         inNomeP.focus();
-        return;
-    }
-    if (inDescP.value.trim() == "") {
+    } else if (inDescP.value.trim() == "") {
         somFalha.play();
         alert("Dê ao menos uma mini descrição do personagem, habilidades ou aparência");
         inDescP.focus();
-        return;
-    }
-    if (inBioP.value.trim() == "") {
+    } else if (inBioP.value.trim() == "") {
         somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
-        return;
-    }
-    let persona = {
+    } let persona = {
         id: Date.now(),
         classe: inClasseP.value,
         raca: inRacaP.value,
@@ -50,10 +45,11 @@ personaForm.addEventListener("submit", function (event) {
         dano: Number(inDanoP.value),
         defesa: Number(inDefP.value),
         sorte: Number(inSorteP.value),
-        velocidade: Number(inVeloP.value)
+        velocidade: Number(inVeloP.value),
+        mana: Number(inManaP.value)
 
     };
-    vetPersonas[vetPersonas.length] = persona;
+    vetPersonas.push(persona);
     localStorage.setItem("personagens", JSON.stringify(vetPersonas));
     somSucesso.play();
     personaForm.reset();

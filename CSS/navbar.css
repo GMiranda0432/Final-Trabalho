@@ -19,7 +19,6 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 .navbar {
     backdrop-filter: blur(var(--blur));
     font-size: 25px;
@@ -38,7 +37,7 @@ header {
     border-color: #4f2958ad;
 }
 .navbar h1{
-    color: var(--agina)
+    color: var(--cor-principal)
 }
 .navbar img{
     width: 50px;
@@ -54,7 +53,9 @@ header {
     display: flex;
     flex-direction: row;
 }
-
+#logos img {
+  content: var(--icone);
+}
 .navbar strong {
     color: var(--cor-destaque);
 }
