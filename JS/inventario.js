@@ -20,7 +20,6 @@ const listaObjetos = document.getElementById("listaObjetos");
 const listaAreas = document.getElementById("listaAreas");
 
 const btnPesquisar = document.getElementById("btnPesquisar");
-const somSucesso = document.getElementById("somSucesso");
 const somFalha = document.getElementById("somFalha");
 
 let idEditando = null;
@@ -57,12 +56,12 @@ function renderizarLista() {
         <span>Sorte: ${personaAtual.sorte}</span>
         <span>Velocidade: ${personaAtual.velocidade}</span>
     </div>
-    <div class="d-flex gap-1">
-        <button class="btn btn-primary btn-ver"
+    <div class="d-flex gap-2 justify-content-center w-100 mt-3">
+        <button class="btn btn-primary btn-ver flex-fill"
             idPersona="${personaAtual.id}">
             Ver ficha
         </button>
-        <button class="btn btn-danger btn-excluir"
+        <button class="btn btn-danger btn-excluir flex-fill"
             idPersona="${personaAtual.id}">
             Excluir
         </button>
@@ -235,7 +234,7 @@ btnPesquisar.addEventListener("click", function () {
     <p class="classe">
      ${personaAtual.classe}
     • ${personaAtual.raca}
-    •${personaAtual.sexo}
+    • ${personaAtual.sexo}
     </p>
     <p class="descricao">
         Descrição: ${personaAtual.descricao}
@@ -250,12 +249,12 @@ btnPesquisar.addEventListener("click", function () {
         <span>Sorte: ${personaAtual.sorte}</span>
         <span>Velocidade: ${personaAtual.velocidade}</span>
     </div>
-    <div class="d-flex gap-1">
-        <button class="btn btn-primary btn-ver" 
+    <div class="d-flex gap-2 justify-content-center w-100 mt-3">
+        <button class="btn btn-primary btn-ver flex-fill" 
             idPersona="${personaAtual.id}">
             Ver ficha
         </button>
-        <button class="btn btn-danger btn-excluir"
+        <button class="btn btn-danger btn-excluir flex-fill"
             idPersona="${personaAtual.id}">
             Excluir
         </button>

@@ -175,20 +175,54 @@ p {
     }
 
 }
-
 #filtros {
-  margin: 20px;
-  justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: var(--borda, 8px);
+    margin-bottom: 20px;
+    align-items: end; 
 }
-#filtros select {
-  background-color: var(--cor-principal);
-    padding: 0.5rem 1.25rem;
-  border-radius: var(--borda);
-}
+#filtros select, 
 #filtros input {
-  background-color: var(--cor-principal);
-    padding: 0.5rem 1.25rem;
-  border-radius: var(--borda);
+    width: 100%;
+    padding: 10px;
+    font-family: 'Tiny5', 'Jersey 15', sans-serif; 
+    font-size: 16px;
+    border: 2px solid goldenrod;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    height: 45px; 
+    box-sizing: border-box;
+}
+#filtros select:focus, 
+#filtros input:focus {
+    outline: none;
+    border-color: var(--cor-principal, #152688);
+    box-shadow: 0 0 5px rgba(21, 38, 136, 0.5);
+}
+#filtros select[id^="inTipoFiltro"] {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: none;
+}
+#filtros input[id^="inPesquisa"] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+@media screen and (max-width: 576px) {
+    #filtros {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+        padding: 10px;
+    }
 }
 #btnPesquisar{
   display: flex;
