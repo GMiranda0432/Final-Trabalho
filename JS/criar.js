@@ -13,7 +13,6 @@ const inDefP = document.getElementById("inDefP");
 const inSorteP = document.getElementById("inSorteP");
 const inVeloP = document.getElementById("inVeloP");
 
-const somSucesso = document.getElementById("somSucesso");
 const somFalha = document.getElementById("somFalha");
 
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];

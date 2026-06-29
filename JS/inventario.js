@@ -20,7 +20,6 @@ const listaObjetos = document.getElementById("listaObjetos");
 const listaAreas = document.getElementById("listaAreas");
 
 const btnPesquisar = document.getElementById("btnPesquisar");
-const somSucesso = document.getElementById("somSucesso");
 const somFalha = document.getElementById("somFalha");
 
 let idEditando = null;
