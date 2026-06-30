@@ -409,8 +409,7 @@ document.getElementById("btnSalvarEdicao").addEventListener("click", function ()
         somFalha.play();
         alert("Sua mente vai explodir com tanta energia, por favor, dê um valor menor que 1.001")
         popupMana.focus();
-    }
-    for (var i = 0; i < vetPersonas.length; i++) {
+    } else {for (var i = 0; i < vetPersonas.length; i++) {
         if (vetPersonas[i].id == idEditando) {
 
             vetPersonas[i].nome = ("popupNome").value;
@@ -432,4 +431,4 @@ document.getElementById("btnSalvarEdicao").addEventListener("click", function ()
     renderizarLista();
     popup.classList.remove("ativo");
     somSucesso.play();
-});
+}});

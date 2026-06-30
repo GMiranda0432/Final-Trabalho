@@ -33,7 +33,7 @@ personaForm.addEventListener("submit", function (event) {
         somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
-    } let persona = {
+    } else {let persona = {
         id: Date.now(),
         classe: inClasseP.value,
         raca: inRacaP.value,
@@ -70,4 +70,4 @@ personaForm.addEventListener("submit", function (event) {
         location.href = "../perfil/inventario.html";
 
     });
-});
+}});
