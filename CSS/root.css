@@ -60,7 +60,7 @@
     2px 2px 0 #e6bc00,
     3px 3px 0 rgb(235, 127, 56),
     4px 4px 0 #000000,
-    -1px -1px 0 #c599e4;
+    -1px -1px 0 #da903b;
 }
 
 [data-theme="manha"] {
@@ -75,11 +75,11 @@
   --cor-texto: #4a2840;
   --cor-negrito: #321625;
   --text-shadow:
-    1px 1px 0 #b878ec,
-    2px 2px 0 #642697,
-    3px 3px 0 #6c3f91,
-    4px 4px 0 #8c67aa,
-    -1px -1px 0 #c599e4;
+    1px 1px 0 #e69340,
+    2px 2px 0 #e66140,
+    3px 3px 0 #6c5a7b,
+    4px 4px 0 rgb(151, 66, 221),
+    -1px -1px 0 #e66140;
 }
 
 [data-theme="tarde"] {
@@ -94,11 +94,11 @@
   --cor-texto: #2c3539;
   --cor-negrito: #1c2224;
   --text-shadow:
-    1px 1px 0 #b878ec,
-    2px 2px 0 #642697,
-    3px 3px 0 #6c3f91,
-    4px 4px 0 #8c67aa,
-    -1px -1px 0 #c599e4;
+    1px 1px 0 #ff8a5c,
+    2px 2px 0  #196b2b,
+    3px 3px 0 #eb6d33,
+    4px 4px 0 #d39614,
+    -1px -1px 0 #c3e4e9;
 }
 
 [data-theme="crepusculo"] {
@@ -113,11 +113,11 @@
   --cor-texto: #4a0e2e;
   --cor-negrito: #2c001e;
   --text-shadow:
-    1px 1px 0 #b878ec,
-    2px 2px 0 #642697,
-    3px 3px 0 #6c3f91,
-    4px 4px 0 #8c67aa,
-    -1px -1px 0 #c599e4;
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
 }
 
 @font-face {
