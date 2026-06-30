@@ -58,14 +58,13 @@ function renderizarLista() {
         <span>Defesa: ${personaAtual.defesa}</span>
         <span>Sorte: ${personaAtual.sorte}</span>
         <span>Velocidade: ${personaAtual.velocidade}</span>
-        <span>Mana: ${personaAtual.mana}</span>
     </div>
     <div class="d-flex gap-2 justify-content-center w-100 mt-3">
-        <button class="btn btn-primary btn-ver flex-fill"
+        <button class="btn btn-primary btn-ver"
             idPersona="${personaAtual.id}">
             Editar
         </button>
-        <button class="btn btn-danger btn-excluir flex-fill"
+        <button class="btn btn-danger btn-excluir"
             idPersona="${personaAtual.id}">
             Excluir
         </button>
@@ -279,7 +278,6 @@ btnPesquisar.addEventListener("click", function () {
         <span>Defesa: ${personaAtual.defesa}</span>
         <span>Sorte: ${personaAtual.sorte}</span>
         <span>Velocidade: ${personaAtual.velocidade}</span>
-        <span>Mana: ${personaAtual.mana}</span>
     </div>
     <div class="d-flex gap-2 justify-content-center w-100 mt-3">
         <button class="btn btn-primary btn-ver flex-fill" 
@@ -339,6 +337,9 @@ document.getElementById("fecharPopup").addEventListener("click", () => {
 });
 document.getElementById("btnSalvarEdicao").addEventListener("click", function () {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
+    const popupSexo = document.getElementById("popupSexo");
+    const popupRaca = document.getElementById("popupRaca");
+    const popupClasse = document.getElementById("popupClasse");
     const popupNome = document.getElementById("popupNome");
     const popupDesc = document.getElementById("popupDesc");
     const popupBio = document.getElementById("popupBio");
@@ -412,12 +413,12 @@ document.getElementById("btnSalvarEdicao").addEventListener("click", function ()
     } else {for (var i = 0; i < vetPersonas.length; i++) {
         if (vetPersonas[i].id == idEditando) {
 
-            vetPersonas[i].nome = ("popupNome").value;
-            vetPersonas[i].classe = ("popupClasse").value;
-            vetPersonas[i].raca = ("popupRaca").value;
-            vetPersonas[i].sexo = ("popupSexo").value;
-            vetPersonas[i].descricao = ("popupDesc").value;
-            vetPersonas[i].biografia = ("popupBio").value;
+            vetPersonas[i].nome = (popupNome.value);
+            vetPersonas[i].classe = (popupClasse.value);
+            vetPersonas[i].raca = (popupRaca.value);
+            vetPersonas[i].sexo = (popupSexo.value);
+            vetPersonas[i].descricao = (popupDesc.value);
+            vetPersonas[i].biografia = (popupBio.value);
             vetPersonas[i].vida = Number(popupVida.value);
             vetPersonas[i].dano = Number(popupDano.value);
             vetPersonas[i].defesa = Number(popupDef.value);
