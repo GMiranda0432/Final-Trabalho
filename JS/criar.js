@@ -18,6 +18,7 @@ const somFalha = document.getElementById("somFalha");
 
 let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
 
+// Botão de criar personagem
 personaForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -46,41 +47,45 @@ personaForm.addEventListener("submit", function (event) {
         alert("Escolha uma opção de sexo, mesmo que seja desconhecido");
         inSexoP.focus();
     }
-    else {let persona = {
-        id: Date.now(),
-        classe: inClasseP.value,
-        raca: inRacaP.value,
-        sexo: inSexoP.value,
-        descricao: inDescP.value.trim(),
-        biografia: inBioP.value.trim(),
-        nome: inNomeP.value.trim(),
-        vida: Number(inVidaP.value),
-        dano: Number(inDanoP.value),
-        defesa: Number(inDefP.value),
-        sorte: Number(inSorteP.value),
-        velocidade: Number(inVeloP.value),
-        mana: Number(inManaP.value)
+    else {
+        let persona = {
+            id: Date.now(),
+            classe: inClasseP.value,
+            raca: inRacaP.value,
+            sexo: inSexoP.value,
+            descricao: inDescP.value.trim(),
+            biografia: inBioP.value.trim(),
+            nome: inNomeP.value.trim(),
+            vida: Number(inVidaP.value),
+            dano: Number(inDanoP.value),
+            defesa: Number(inDefP.value),
+            sorte: Number(inSorteP.value),
+            velocidade: Number(inVeloP.value),
+            mana: Number(inManaP.value)
 
-    };
-    vetPersonas.push(persona);
-    localStorage.setItem("personagens", JSON.stringify(vetPersonas));
-    somSucesso.play();
-    personaForm.reset();
+        };
+        vetPersonas.push(persona);
+        localStorage.setItem("personagens", JSON.stringify(vetPersonas));
+        somSucesso.play();
+        personaForm.reset();
 
-    document.getElementById("popupSucesso").classList.add("ativo");
-    const popup = document.getElementById("popupSucesso");
+        document.getElementById("popupSucesso").classList.add("ativo");
+        const popup = document.getElementById("popupSucesso");
 
-    document.getElementById("novoPersonagem").addEventListener("click", () => {
+        // Botão de novo personagem
+        document.getElementById("novoPersonagem").addEventListener("click", () => {
 
-        popup.classList.remove("ativo");
+            popup.classList.remove("ativo");
 
-        inNomeP.focus();
+            inNomeP.focus();
 
-    });
+        });
 
-    document.getElementById("abrirInventario").addEventListener("click", () => {
+        // Botão de abrir inventário
+        document.getElementById("abrirInventario").addEventListener("click", () => {
 
-        location.href = "../perfil/inventario.html";
+            location.href = "../perfil/inventario.html";
 
-    });
-}});
+        });
+    }
+});

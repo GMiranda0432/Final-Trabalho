@@ -26,6 +26,7 @@ const somFalha = document.getElementById("somFalha");
 
 let idEditando = null;
 
+// Renderiza a lista de personagens na tela, buscando dados do localStorage
 function renderizarLista() {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
     listaPersonagens.innerHTML = "";
@@ -80,6 +81,7 @@ function renderizarLista() {
 
 renderizarLista();
 
+// Botão de excluir personagem
 listaPersonagens.addEventListener("click", function (event) {
     if (event.target.classList.contains("btn-excluir")) {
         const idDeletar = Number(event.target.getAttribute("idPersona"));
@@ -102,6 +104,7 @@ listaPersonagens.addEventListener("click", function (event) {
     }
 });
 
+// Botão de pesquisar filtro
 btnPesquisar.addEventListener("click", function () {
     const pesquisaClasse = inPesquisaClasse.value;
     const pesquisaRaca = inPesquisaRaca.value;
@@ -124,7 +127,8 @@ btnPesquisar.addEventListener("click", function () {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
     let novoVetPersonas = [];
 
-
+    // Verifica cada personagem para ver se combina com todos os filtros selecionados
+    // A pesquisa só mostra o personagem se todos os requisitos forem verdadeiros, se um for falso ele é ignorado
     for (var i = 0; i < vetPersonas.length; i++) {
         let personaAtual = vetPersonas[i];
 
@@ -212,7 +216,7 @@ btnPesquisar.addEventListener("click", function () {
                 condSorte = true;
             }
         }
-        
+
         let condVelo = false;
         if (pesquisaVelo == "") {
             condVelo = true;
@@ -228,7 +232,7 @@ btnPesquisar.addEventListener("click", function () {
                 condVelo = true;
             }
         }
-        
+
         let condMana = false;
         if (pesquisaMana == "") {
             condMana = true;
@@ -301,6 +305,7 @@ btnPesquisar.addEventListener("click", function () {
 });
 
 const popup = document.getElementById("popupFicha");
+// Botão de editar personagem
 listaPersonagens.addEventListener("click", function (event) {
     if (event.target.classList.contains("btn-ver")) {
 
@@ -332,9 +337,11 @@ listaPersonagens.addEventListener("click", function (event) {
         popup.classList.add("ativo");
     }
 });
+// Botão de fechar popup
 document.getElementById("fecharPopup").addEventListener("click", () => {
     popup.classList.remove("ativo");
 });
+// Botão de salvar edição
 document.getElementById("btnSalvarEdicao").addEventListener("click", function () {
     let vetPersonas = JSON.parse(localStorage.getItem("personagens")) || [];
     const popupSexo = document.getElementById("popupSexo");
@@ -410,26 +417,28 @@ document.getElementById("btnSalvarEdicao").addEventListener("click", function ()
         somFalha.play();
         alert("Sua mente vai explodir com tanta energia, por favor, dê um valor menor que 1.001")
         popupMana.focus();
-    } else {for (var i = 0; i < vetPersonas.length; i++) {
-        if (vetPersonas[i].id == idEditando) {
+    } else {
+        for (var i = 0; i < vetPersonas.length; i++) {
+            if (vetPersonas[i].id == idEditando) {
 
-            vetPersonas[i].nome = (popupNome.value);
-            vetPersonas[i].classe = (popupClasse.value);
-            vetPersonas[i].raca = (popupRaca.value);
-            vetPersonas[i].sexo = (popupSexo.value);
-            vetPersonas[i].descricao = (popupDesc.value);
-            vetPersonas[i].biografia = (popupBio.value);
-            vetPersonas[i].vida = Number(popupVida.value);
-            vetPersonas[i].dano = Number(popupDano.value);
-            vetPersonas[i].defesa = Number(popupDef.value);
-            vetPersonas[i].sorte = Number(popupSorte.value);
-            vetPersonas[i].velocidade = Number(popupVelo.value);
-            vetPersonas[i].mana = Number(popupMana.value);
+                vetPersonas[i].nome = (popupNome.value);
+                vetPersonas[i].classe = (popupClasse.value);
+                vetPersonas[i].raca = (popupRaca.value);
+                vetPersonas[i].sexo = (popupSexo.value);
+                vetPersonas[i].descricao = (popupDesc.value);
+                vetPersonas[i].biografia = (popupBio.value);
+                vetPersonas[i].vida = Number(popupVida.value);
+                vetPersonas[i].dano = Number(popupDano.value);
+                vetPersonas[i].defesa = Number(popupDef.value);
+                vetPersonas[i].sorte = Number(popupSorte.value);
+                vetPersonas[i].velocidade = Number(popupVelo.value);
+                vetPersonas[i].mana = Number(popupMana.value);
+            }
         }
-    }
 
-    localStorage.setItem("personagens", JSON.stringify(vetPersonas));
-    renderizarLista();
-    popup.classList.remove("ativo");
-    somSucesso.play();
-}});
+        localStorage.setItem("personagens", JSON.stringify(vetPersonas));
+        renderizarLista();
+        popup.classList.remove("ativo");
+        somSucesso.play();
+    }
+});

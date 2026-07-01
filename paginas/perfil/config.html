@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!--navbar -->
     <header>
         <div class="navbar">
             <div id="logos">
@@ -40,29 +41,32 @@
             </nav>
         </div>
     </header>
+    <!-- Conteúdo-->
     <main class="container py-4">
         <div id="conteudo">
+            <!-- Formulário -->
             <form id="configForm">
-              <label for="inTema" class="form-label"><h1>Tema do site</h1></label>
-                    <select id="inTema" name="classeP" class="form-select" required>
-                        <option value="" disabled hidden selected>-- Selecione um tema --</option>
-                        <option value="dia">Dia</option>
-                        <option value="noite">Noite</option>
-                        <option value="tarde">Tarde</option>
-                        <option value="manha">Manhã</option>
-                        <option value="anoitecer">Anoitecer</option>
-                        <option value="crepusculo">Crepúsculo</option>
-                        <option value="cidade">Cidade</option>
-                        <option value="constelacao">Constelação</option>
-                        <option value="futuro">Futuro</option>
-                        <option value="galaxia">Galáxia</option>
-                        </select>
-                    <button type="submit" class="btn text-center btn-success btn-lg">Salvar Configurações</button>
-                        </form>
+                <label for="inTema" class="form-label">
+                    <h1>Tema do site</h1>
+                </label>
+                <select id="inTema" name="classeP" class="form-select" required>
+                    <option value="" disabled hidden selected>-- Selecione um tema --</option>
+                    <option value="dia">Dia</option>
+                    <option value="noite">Noite</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="manha">Manhã</option>
+                    <option value="anoitecer">Anoitecer</option>
+                    <option value="crepusculo">Crepúsculo</option>
+                    <option value="cidade">Cidade</option>
+                    <option value="constelacao">Constelação</option>
+                    <option value="futuro">Futuro</option>
+                    <option value="galaxia">Galáxia</option>
+                </select>
+                <button type="submit" class="btn text-center btn-success btn-lg">Salvar Configurações</button>
+            </form>
         </div>
-                    <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
+        <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../JS/script.js"></script>
 </body>

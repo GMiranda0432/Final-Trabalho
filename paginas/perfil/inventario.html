@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!--navbar -->
     <header>
         <div class="navbar">
             <div id="logos">
@@ -40,9 +41,11 @@
             </nav>
         </div>
     </header>
+    <!-- Conteúdo-->
     <main id="containerElementos" class="container py-4">
         <div id="conteudo">
             <h1 class="h1 text-center mb-4">Inventário</h1>
+            <!-- Filtros de pesquisa -->
             <div id="filtros">
 
                 <select id="inPesquisaClasse">
@@ -123,68 +126,73 @@
                     <option value="desconhecido">Desconhecido</option>
                 </select>
                 <div class="d-flex">
-                <select id="inTipoFiltroVida">
-                    <option value="vidaIgual" selected>Vida Igual a:</option>
-                    <option value="vidaMaior">Vida Maior que:</option>
-                    <option value="vidaMenor">Vida menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaVida" placeholder="Digite o valor da vida">
+                    <select id="inTipoFiltroVida">
+                        <option value="vidaIgual" selected>Vida Igual a:</option>
+                        <option value="vidaMaior">Vida Maior que:</option>
+                        <option value="vidaMenor">Vida menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaVida" placeholder="Digite o valor da vida">
                 </div>
                 <div class="d-flex">
-                <select id="inTipoFiltroDano">
-                    <option value="danoIgual" selected>Dano igual a:</option>
-                    <option value="danoMaior">Dano Maior que:</option>
-                    <option value="danoMenor">Dano menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaDano" placeholder="Digite o valor do dano">
+                    <select id="inTipoFiltroDano">
+                        <option value="danoIgual" selected>Dano igual a:</option>
+                        <option value="danoMaior">Dano Maior que:</option>
+                        <option value="danoMenor">Dano menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaDano" placeholder="Digite o valor do dano">
                 </div>
                 <div class="d-flex">
-                <select id="inTipoFiltroDef">
-                    <option value="defIgual" selected>Defesa igual a:</option>
-                    <option value="defMaior">Defesa Maior que:</option>
-                    <option value="defMenor">Defesa menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaDef" placeholder="Digite o valor da Defesa">
+                    <select id="inTipoFiltroDef">
+                        <option value="defIgual" selected>Defesa igual a:</option>
+                        <option value="defMaior">Defesa Maior que:</option>
+                        <option value="defMenor">Defesa menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaDef" placeholder="Digite o valor da Defesa">
                 </div>
                 <div class="d-flex">
-                <select id="inTipoFiltroSorte">
-                    <option value="sorteIgual" selected>Sorte igual a:</option>
-                    <option value="sorteMaior">Sorte Maior que:</option>
-                    <option value="sorteMenor">Sorte menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaSorte" placeholder="Digite o valor da Sorte">
+                    <select id="inTipoFiltroSorte">
+                        <option value="sorteIgual" selected>Sorte igual a:</option>
+                        <option value="sorteMaior">Sorte Maior que:</option>
+                        <option value="sorteMenor">Sorte menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaSorte" placeholder="Digite o valor da Sorte">
                 </div>
                 <div class="d-flex">
-                <select id="inTipoFiltroVelo">
-                    <option value="veloIgual" selected>Velocidade igual a:</option>
-                    <option value="veloMaior">Velocidade Maior que:</option>
-                    <option value="veloMenor">Velocidade menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaVelo" placeholder="Digite o valor da Velocidade">
+                    <select id="inTipoFiltroVelo">
+                        <option value="veloIgual" selected>Velocidade igual a:</option>
+                        <option value="veloMaior">Velocidade Maior que:</option>
+                        <option value="veloMenor">Velocidade menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaVelo" placeholder="Digite o valor da Velocidade">
                 </div>
                 <div class="d-flex">
-                <select id="inTipoFiltroMana">
-                    <option value="manaIgual" selected>Mana igual a:</option>
-                    <option value="manaMaior">Mana Maior que:</option>
-                    <option value="manaMenor">Mana menor que:</option>
-                </select>
-                <input type="number" id="inPesquisaMana" placeholder="Digite o valor da Mana">
+                    <select id="inTipoFiltroMana">
+                        <option value="manaIgual" selected>Mana igual a:</option>
+                        <option value="manaMaior">Mana Maior que:</option>
+                        <option value="manaMenor">Mana menor que:</option>
+                    </select>
+                    <input type="number" id="inPesquisaMana" placeholder="Digite o valor da Mana">
                 </div>
-                
+
             </div>
+            <!-- Botão de pesquisar -->
             <button id="btnPesquisar" class="btn">Pesquisar</button>
+            <!--Áudios-->
             <audio id="somSucesso" src="../../recursos/sons/somSucesso.mp3"></audio>
             <audio id="somFalha" src="../../recursos/sons/somFalha.mp3"></audio>
+            <!-- Mensagem de vazio -->
             <div id="msgVazio" class="text-center mt-5">
                 <p class="fs-4">Vazio, igual seu coração :P</p>
                 <p class="text-muted">Crie seu primeiro elemento para vê-lo aparecer aqui.</p>
             </div>
 
+            <!-- Lista de personagens -->
             <div id="listaPersonagens">
             </div>
         </div>
         </div>
     </main>
+    <!-- Popup de edição -->
     <div id="popupFicha" class="popup">
 
         <div class="popup-card">
@@ -289,13 +297,12 @@
             <p>Velocidade</p>
             <input type="number" id="popupMana" placeholder="Nova Mana">
             <p>Mana</p>
-<hr>
+            <hr>
             <button id="btnSalvarEdicao" class="btn">Salvar</button>
         </div>
 
     </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../JS/script.js"></script>
     <script src="../../JS/inventario.js"></script>
