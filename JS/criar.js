@@ -23,7 +23,7 @@ personaForm.addEventListener("submit", function (event) {
 
     if (inNomeP.value.trim() == "") {
         somFalha.play();
-        alert("O nome do personagem da sua ficha não pode ser invisível");
+        alert("O nome do personagem da sua ficha não pode ser invisível, Digite um nome");
         inNomeP.focus();
     } else if (inDescP.value.trim() == "") {
         somFalha.play();
@@ -33,7 +33,20 @@ personaForm.addEventListener("submit", function (event) {
         somFalha.play();
         alert("Digite uma mini história pro seu personagem, tenha criatividade se for jogar RPG");
         inBioP.focus();
-    } else {let persona = {
+    } else if (inClasseP.value.trim() == "") {
+        somFalha.play();
+        alert("Tudo existente sofre classificações, Escolha uma classe para o seu personagem");
+        inClasseP.focus();
+    } else if (inRacaP.value.trim() == "") {
+        somFalha.play();
+        alert("Escolha uma raça para o seu personagem");
+        inRacaP.focus();
+    } else if (inSexoP.value.trim() == "") {
+        somFalha.play();
+        alert("Escolha uma opção de sexo, mesmo que seja desconhecido");
+        inSexoP.focus();
+    }
+    else {let persona = {
         id: Date.now(),
         classe: inClasseP.value,
         raca: inRacaP.value,

@@ -101,7 +101,7 @@ p {
   border-color: var(--cor-destaque-transp);
   padding: 1rem;
   border-radius: var(--borda);
-  backdrop-filter: blur(var(--blur))
+  -webkit-backdrop-filter-backdrop-filter: blur(var(--blur))
 }
 
 #mainConteudo {

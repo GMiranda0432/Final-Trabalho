@@ -59,7 +59,7 @@
     1px 1px 0 #e65c00,
     2px 2px 0 #e6bc00,
     3px 3px 0 rgb(235, 127, 56),
-    4px 4px 0 #000000,
+    4px 4px 0 #ff0000,
     -1px -1px 0 #da903b;
 }
 
@@ -100,10 +100,99 @@
     4px 4px 0 #d39614,
     -1px -1px 0 #c3e4e9;
 }
-
+[data-theme="anoitecer"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_anoitecer.png);
+  --icone: url(../recursos/imgs/icone_anoitecer.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --text-shadow:
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
+}
 [data-theme="crepusculo"] {
   --fundo-imagem: url(../recursos/imgs/fundo_crepusculo.png);
   --icone: url(../recursos/imgs/icone_crepusculo.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --text-shadow:
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
+}
+[data-theme="cidade"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_cidade.png);
+  --icone: url(../recursos/imgs/icone_cidade.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --text-shadow:
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
+}
+[data-theme="constelacao"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_constelacao.png);
+  --icone: url(../recursos/imgs/icone_constelacao.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --text-shadow:
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
+}
+[data-theme="futuro"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_futuro.png);
+  --icone: url(../recursos/imgs/icone_futuro.png);
+  --cor-principal: #f8f8f8;
+  --cor-secundaria: #900c3fbe;
+  --transp-primaria: #ffccd5b4;
+  --cor-destaque: #c70039;
+  --cor-destaque-transp: #ff57338c;
+  --cor-fundo: #581845;
+  --cor-texto: #4a0e2e;
+  --cor-negrito: #2c001e;
+  --text-shadow:
+    1px 1px 0 #eb9a74,
+    2px 2px 0 #fc2d37be,
+    3px 3px 0 #e75e1f,
+    4px 4px 0 #eb9a74,
+    -1px -1px 0 #ffb08b;
+}
+[data-theme="galaxia"] {
+  --fundo-imagem: url(../recursos/imgs/fundo_galaxia.png);
+  --icone: url(../recursos/imgs/icone_galaxia.png);
   --cor-principal: #f8f8f8;
   --cor-secundaria: #900c3fbe;
   --transp-primaria: #ffccd5b4;

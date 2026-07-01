@@ -48,12 +48,12 @@
             <form id="personaForm">
                 <div class="mb-3">
                     <label for="inNomeP" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="inNomeP" name="nomeP" required placeholder="Digite o nome do personagem">
+                    <input type="text" class="form-control" id="inNomeP" name="nomeP" placeholder="Digite o nome do personagem">
                 </div>
                 <div class="mb-3">
                     <label for="inClasseP" class="form-label">Classe</label>
-                    <select id="inClasseP" name="classeP" class="form-select" required>
-                        <option disabled hidden selected>-- Selecione uma Classe --</option>
+                    <select id="inClasseP" name="classeP" class="form-select">
+                        <option value = "" disabled hidden selected>-- Selecione uma Classe --</option>
                         <option value="guardiao">Guardião</option>
                         <option value="guerreiro">Guerreiro</option>
                         <option value="berserker">Berserker</option>
@@ -91,8 +91,8 @@
 
                 <div class="mb-3">
                     <label for="inRacaP" class="form-label">Raça</label>
-                    <select id="inRacaP" name="racaP" class="form-select" required placeholder="Selecione uma raça">
-                        <option disabled hidden selected>-- Selecione uma Raça --</option>
+                    <select id="inRacaP" name="racaP" class="form-select" placeholder="Selecione uma raça">
+                        <option value = "" disabled hidden selected>-- Selecione uma Raça --</option>
                         <option value="humano">Humano</option>
                         <option value="elfo">Elfo</option>
                         <option value="anao">Anão</option>
@@ -129,8 +129,8 @@
 
                 <div class="mb-3">
                     <label for="inSexoP" class="form-label">Sexo</label>
-                    <select id="inSexoP" name="sexoP" class="form-select" requiredplaceholder="Selecione uma opção de sexo">
-                        <option disabled hidden selected>-- Selecione uma opção de sexo--</option>
+                    <select id="inSexoP" name="sexoP" class="form-select" placeholder="Selecione uma opção de sexo">
+                        <option value = "" disabled hidden selected>-- Selecione uma opção de sexo--</option>
                         <option value="masculino">Masculino</option>
                         <option value="feminino">Feminino</option>
                         <option value="intersex">Intersex</option>
@@ -139,17 +139,13 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="inDescP" class="form-label">Descrição - Relacionado a jogabilidade do personagem, as
-                        habilidades, aparência, personalidade-</label>
-                    <textarea id="inDescP" name="descP" class="form-control" rows="4" required
-                        placeholder="Digite uma descrição do personagem"></textarea>
+                    <label for="inDescP" class="form-label">Descrição - Relacionado a jogabilidade do personagem, as habilidades, aparência, personalidade-</label>
+                    <textarea id="inDescP" name="descP" class="form-control" rows="4" placeholder="Digite uma descrição do personagem"></textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="inBioP" class="form-label">Biografia - Relacionado a lore do personagem, os sonhos,
-                        relações, passado-</label>
-                    <textarea id="inBioP" name="bioP" class="form-control" rows="4" required
-                        placeholder="Digite a biografia do personagem"> </textarea>
+                    <label for="inBioP" class="form-label">Biografia - Relacionado a lore do personagem, os sonhos, relações, passado-</label>
+                    <textarea id="inBioP" name="bioP" class="form-control" rows="4" placeholder="Digite a biografia do personagem"></textarea>
                 </div>
                 <p class="h3 mt-4">
                     Estatísticas do personagem, dê a todos os atributos abaixo pontos entre 1 a 1.000
@@ -157,27 +153,27 @@
                 <div class="row g-3 mb-3">
                     <div class="col-6 col-md-2">
                         <label for="inVidaP" class="form-label">Vida</label>
-                        <input type="number" id="inVidaP" name="vidaP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inVidaP" name="vidaP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                     <div class="col-6 col-md-2">
                         <label for="inDanoP" class="form-label">Dano</label>
-                        <input type="number" id="inDanoP" name="danoP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inDanoP" name="danoP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                     <div class="col-6 col-md-2">
                         <label for="inDefP" class="form-label">Defesa</label>
-                        <input type="number" id="inDefP" name="defP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inDefP" name="defP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                     <div class="col-6 col-md-2">
                         <label for="inSorteP" class="form-label">Sorte</label>
-                        <input type="number" id="inSorteP" name="sorteP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inSorteP" name="sorteP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                     <div class="col-6 col-md-2">
                         <label for="inVeloP" class="form-label">Velocidade</label>
-                        <input type="number" id="inVeloP" name="veloP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inVeloP" name="veloP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                     <div class="col-6 col-md-2">
                         <label for="inManaP" class="form-label">Mana</label>
-                        <input type="number" id="inManaP" name="manaP" required min="1" max="1000" class="form-control" placeholder="1-1.000">
+                        <input type="number" id="inManaP" name="manaP" min="1" max="1000" class="form-control" placeholder="1-1.000" required>
                     </div>
                 </div>
 
